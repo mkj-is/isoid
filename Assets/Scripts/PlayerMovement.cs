@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     void Awake()
     {
         playerRigidBody = GetComponent<Rigidbody>();
-        exhaustParticles = GetComponent<ParticleSystem>();
+        exhaustParticles = GetComponentInChildren<ParticleSystem>();
     }
 
     void FixedUpdate()
@@ -27,14 +27,15 @@ public class PlayerMovement : MonoBehaviour {
 
         transform.position = new Vector3(transform.position.x, height, transform.position.z);
 
-        if (v > 0)
+		exhaustParticles.emissionRate = 2 + v * v * forwardSpeed/2;
+        /*if (v > 0)
         {
             exhaustParticles.enableEmission = true;
         }
         else
         {
             exhaustParticles.enableEmission = false;
-        }
+        }*/
     }
 
     void Move(float v)
