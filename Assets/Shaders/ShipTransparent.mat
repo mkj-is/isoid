@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: BariWireTransparent
+  m_Name: ShipTransparent
   m_Shader: {fileID: 4800000, guid: bce2f9931249c6b458cbf80583bca87e, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -24,7 +24,7 @@ Material:
       data:
         first:
           name: _LineWidth
-        second: .0700000003
+        second: .0500000007
     m_Colors:
       data:
         first:
@@ -33,7 +33,7 @@ Material:
       data:
         first:
           name: _LineColor
-        second: {r: 1, g: 0, b: 1, a: 1}
+        second: {r: 0, g: .0876772404, b: .977941155, a: 1}
       data:
         first:
           name: _GridColor

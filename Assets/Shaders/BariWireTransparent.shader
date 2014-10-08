@@ -11,7 +11,7 @@ Shader "WireFrameTransparent"
         Pass
         {
             Blend SrcAlpha OneMinusSrcAlpha
-            Cull Off
+            Cull Back
             ZWrite Off
 			CGPROGRAM
 			
