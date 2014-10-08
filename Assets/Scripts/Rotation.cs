@@ -7,6 +7,6 @@ public class Rotation : MonoBehaviour {
 	
 	void FixedUpdate () {
 
-		transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+		transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
 	}
 }
