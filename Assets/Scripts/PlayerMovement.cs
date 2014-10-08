@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour {
     void Awake()
     {
         playerRigidBody = GetComponent<Rigidbody>();
-        exhaustParticles = GetComponent<ParticleSystem>();
+        exhaustParticles = GetComponentInChildren<ParticleSystem>();
     }
 
     void FixedUpdate()
