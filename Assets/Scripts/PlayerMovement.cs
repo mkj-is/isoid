@@ -7,12 +7,13 @@ public class PlayerMovement : MonoBehaviour {
     public float rotationSpeed = 10f;
     public float height = 3f;
 
-    Vector3 movement;
     Rigidbody playerRigidBody;
+    ParticleSystem exhaustParticles;
 
     void Awake()
     {
         playerRigidBody = GetComponent<Rigidbody>();
+        exhaustParticles = GetComponent<ParticleSystem>();
     }
 
     void FixedUpdate()
@@ -23,15 +24,23 @@ public class PlayerMovement : MonoBehaviour {
         Move(v);
 
         Turning(h);
+
+        transform.position = new Vector3(transform.position.x, height, transform.position.z);
+
+        if (v > 0)
+        {
+            exhaustParticles.enableEmission = true;
+        }
+        else
+        {
+            exhaustParticles.enableEmission = false;
+        }
     }
 
     void Move(float v)
     {
-        movement = transform.forward * forwardSpeed * Time.deltaTime * v;
-        Vector3 position = transform.position;
-        position.y = height;
-
-        playerRigidBody.MovePosition(position + movement);
+        //playerRigidBody.MovePosition(position + movement);
+        playerRigidBody.AddForce(transform.forward * v * Time.deltaTime * forwardSpeed);
     }
 
     void Turning(float h)

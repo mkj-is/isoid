@@ -4,9 +4,8 @@ using System.Collections;
 public class Rotation : MonoBehaviour {
 
 	public float rotationSpeed = 30f;
-	
-	void FixedUpdate () {
 
+	void FixedUpdate () {
 		transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
 	}
 }
