@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public float forwardSpeed = 6f;
     public float rotationSpeed = 10f;
-    public float height = 3f;
+    public float height = 2f;
 
     Rigidbody playerRigidBody;
     ParticleSystem exhaustParticles;
@@ -45,6 +45,12 @@ public class PlayerMovement : MonoBehaviour {
 
     void Turning(float h)
     {
-        transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime * h);
+		playerRigidBody.AddTorque (Vector3.up * rotationSpeed * Time.deltaTime * h);
+		//playerRigidBody.WakeUp ();
+        //transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime * h);
     }
+
+	void OnTriggerEnter(Collider other){
+		Destroy (other.gameObject);
+	}
 }
