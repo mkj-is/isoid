@@ -73,6 +73,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   averageSize: 1
-  pulseSize: .0700000003
+  pulseSize: .150000006
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

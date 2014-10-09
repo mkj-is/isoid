@@ -24,7 +24,7 @@ Material:
       data:
         first:
           name: _LineWidth
-        second: .0700000003
+        second: .0299999993
     m_Colors:
       data:
         first:
