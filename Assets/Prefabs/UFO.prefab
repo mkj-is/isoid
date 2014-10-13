@@ -11,9 +11,9 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 95: {fileID: 9500000}
-  - 114: {fileID: 11400000}
   - 135: {fileID: 13500000}
   - 54: {fileID: 5400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -70,7 +70,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -89,7 +89,8 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
---- !u!114 &11400000
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -97,10 +98,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

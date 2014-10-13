@@ -85,9 +85,9 @@ GameObject:
   - 33: {fileID: 27026811}
   - 23: {fileID: 27026810}
   - 95: {fileID: 27026809}
-  - 114: {fileID: 27026808}
   - 135: {fileID: 27026807}
   - 54: {fileID: 27026806}
+  - 114: {fileID: 27026808}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -106,7 +106,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -127,16 +127,18 @@ SphereCollider:
 --- !u!114 &27026808
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 553692507}
   m_GameObject: {fileID: 27026805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &27026809
 Animator:
   serializedVersion: 3
@@ -1759,9 +1761,9 @@ GameObject:
   - 33: {fileID: 634547943}
   - 23: {fileID: 634547942}
   - 95: {fileID: 634547941}
-  - 114: {fileID: 634547940}
   - 135: {fileID: 634547939}
   - 54: {fileID: 634547938}
+  - 114: {fileID: 634547940}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -1780,7 +1782,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -1801,16 +1803,18 @@ SphereCollider:
 --- !u!114 &634547940
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 476592403}
   m_GameObject: {fileID: 634547937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &634547941
 Animator:
   serializedVersion: 3
@@ -2580,9 +2584,9 @@ GameObject:
   - 33: {fileID: 1210944632}
   - 23: {fileID: 1210944631}
   - 95: {fileID: 1210944630}
-  - 114: {fileID: 1210944629}
   - 135: {fileID: 1210944628}
   - 54: {fileID: 1210944627}
+  - 114: {fileID: 1210944629}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -2601,7 +2605,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -2622,16 +2626,18 @@ SphereCollider:
 --- !u!114 &1210944629
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 577138793}
   m_GameObject: {fileID: 1210944626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &1210944630
 Animator:
   serializedVersion: 3
@@ -2700,9 +2706,9 @@ GameObject:
   - 33: {fileID: 1237722007}
   - 23: {fileID: 1237722006}
   - 95: {fileID: 1237722005}
-  - 114: {fileID: 1237722004}
   - 135: {fileID: 1237722003}
   - 54: {fileID: 1237722002}
+  - 114: {fileID: 1237722004}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -2721,7 +2727,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -2742,16 +2748,18 @@ SphereCollider:
 --- !u!114 &1237722004
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 1517444115}
   m_GameObject: {fileID: 1237722001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &1237722005
 Animator:
   serializedVersion: 3
@@ -3143,9 +3151,9 @@ GameObject:
   - 33: {fileID: 1412481074}
   - 23: {fileID: 1412481073}
   - 95: {fileID: 1412481072}
-  - 114: {fileID: 1412481071}
   - 135: {fileID: 1412481070}
   - 54: {fileID: 1412481069}
+  - 114: {fileID: 1412481071}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -3164,7 +3172,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -3185,16 +3193,18 @@ SphereCollider:
 --- !u!114 &1412481071
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 915457647}
   m_GameObject: {fileID: 1412481068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &1412481072
 Animator:
   serializedVersion: 3
@@ -3311,9 +3321,9 @@ GameObject:
   - 33: {fileID: 1537001611}
   - 23: {fileID: 1537001610}
   - 95: {fileID: 1537001609}
-  - 114: {fileID: 1537001608}
   - 135: {fileID: 1537001607}
   - 54: {fileID: 1537001613}
+  - 114: {fileID: 1537001608}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -3337,16 +3347,18 @@ SphereCollider:
 --- !u!114 &1537001608
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 1249474573}
   m_GameObject: {fileID: 1537001606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &1537001609
 Animator:
   serializedVersion: 3
@@ -3415,7 +3427,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -3536,9 +3548,9 @@ GameObject:
   - 33: {fileID: 1686761045}
   - 23: {fileID: 1686761044}
   - 95: {fileID: 1686761043}
-  - 114: {fileID: 1686761042}
   - 135: {fileID: 1686761041}
   - 54: {fileID: 1686761040}
+  - 114: {fileID: 1686761042}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -3557,7 +3569,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -3578,16 +3590,18 @@ SphereCollider:
 --- !u!114 &1686761042
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 745966089}
   m_GameObject: {fileID: 1686761039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &1686761043
 Animator:
   serializedVersion: 3
@@ -3871,9 +3885,9 @@ GameObject:
   - 33: {fileID: 1971138453}
   - 23: {fileID: 1971138452}
   - 95: {fileID: 1971138451}
-  - 114: {fileID: 1971138450}
   - 135: {fileID: 1971138449}
   - 54: {fileID: 1971138448}
+  - 114: {fileID: 1971138450}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -3892,7 +3906,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -3913,16 +3927,18 @@ SphereCollider:
 --- !u!114 &1971138450
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 133329430}
   m_GameObject: {fileID: 1971138447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &1971138451
 Animator:
   serializedVersion: 3
@@ -3991,9 +4007,9 @@ GameObject:
   - 33: {fileID: 2024759372}
   - 23: {fileID: 2024759371}
   - 95: {fileID: 2024759370}
-  - 114: {fileID: 2024759369}
   - 135: {fileID: 2024759368}
   - 54: {fileID: 2024759367}
+  - 114: {fileID: 2024759369}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -4012,7 +4028,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 4
@@ -4033,16 +4049,18 @@ SphereCollider:
 --- !u!114 &2024759369
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 1752781011}
   m_GameObject: {fileID: 2024759366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 120
+  rotationSpeed: 30
+  wobbleSpeed: 4
+  wobbleMagnitude: .00999999978
 --- !u!95 &2024759370
 Animator:
   serializedVersion: 3
