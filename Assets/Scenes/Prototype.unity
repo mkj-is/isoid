@@ -88,6 +88,7 @@ GameObject:
   - 135: {fileID: 27026807}
   - 54: {fileID: 27026806}
   - 114: {fileID: 27026808}
+  - 114: {fileID: 27026813}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -103,7 +104,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 553692507}
   m_GameObject: {fileID: 27026805}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -196,6 +197,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!114 &27026813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 553692507}
+  m_GameObject: {fileID: 27026805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1001 &55092313
 Prefab:
   m_ObjectHideFlags: 0
@@ -464,9 +479,10 @@ GameObject:
   - 95: {fileID: 529675894}
   - 114: {fileID: 529675893}
   - 135: {fileID: 529675892}
+  - 114: {fileID: 529675898}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -556,6 +572,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &529675898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 2078321894}
+  m_GameObject: {fileID: 529675891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0
 --- !u!1 &541351908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1794,7 @@ GameObject:
   - 135: {fileID: 634547939}
   - 54: {fileID: 634547938}
   - 114: {fileID: 634547940}
+  - 114: {fileID: 634547945}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -1779,7 +1810,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 476592403}
   m_GameObject: {fileID: 634547937}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -1872,6 +1903,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &634547945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 476592403}
+  m_GameObject: {fileID: 634547937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1001 &745966089
 Prefab:
   m_ObjectHideFlags: 0
@@ -1977,9 +2022,10 @@ GameObject:
   - 95: {fileID: 838371033}
   - 114: {fileID: 838371037}
   - 135: {fileID: 838371038}
+  - 114: {fileID: 838371039}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2069,6 +2115,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.00000024
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &838371039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 55092313}
+  m_GameObject: {fileID: 838371032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0
 --- !u!1 &904307220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,7 +2151,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 904307220}
   m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
-  m_LocalPosition: {x: .0677632689, y: .00109290553, z: 1.0258646}
+  m_LocalPosition: {x: -.394279391, y: .00109287992, z: .321350098}
   m_LocalScale: {x: 1, y: 1.51515126, z: 1}
   m_Children: []
   m_Father: {fileID: 1771387747}
@@ -2157,9 +2217,10 @@ GameObject:
   - 95: {fileID: 991671829}
   - 114: {fileID: 991671828}
   - 135: {fileID: 991671827}
+  - 114: {fileID: 991671833}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2249,6 +2310,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
+--- !u!114 &991671833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 198197929}
+  m_GameObject: {fileID: 991671826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0
 --- !u!1001 &1001237637
 Prefab:
   m_ObjectHideFlags: 0
@@ -2278,7 +2353,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: .707106829
+      value: -.707106829
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2315,9 +2390,10 @@ GameObject:
   - 95: {fileID: 1007160009}
   - 114: {fileID: 1007160008}
   - 135: {fileID: 1007160007}
+  - 114: {fileID: 1007160013}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2407,6 +2483,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1007160013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 2041962308}
+  m_GameObject: {fileID: 1007160006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0
 --- !u!1001 &1036821935
 Prefab:
   m_ObjectHideFlags: 0
@@ -2508,9 +2598,10 @@ GameObject:
   - 95: {fileID: 1194007030}
   - 114: {fileID: 1194007029}
   - 135: {fileID: 1194007028}
+  - 114: {fileID: 1194007034}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2600,6 +2691,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!114 &1194007034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 1036821935}
+  m_GameObject: {fileID: 1194007027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0
 --- !u!1 &1210944626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2719,7 @@ GameObject:
   - 135: {fileID: 1210944628}
   - 54: {fileID: 1210944627}
   - 114: {fileID: 1210944629}
+  - 114: {fileID: 1210944634}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -2629,7 +2735,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 577138793}
   m_GameObject: {fileID: 1210944626}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -2722,6 +2828,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
+--- !u!114 &1210944634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 577138793}
+  m_GameObject: {fileID: 1210944626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1 &1237722001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,6 +2856,7 @@ GameObject:
   - 135: {fileID: 1237722003}
   - 54: {fileID: 1237722002}
   - 114: {fileID: 1237722004}
+  - 114: {fileID: 1237722009}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -2751,7 +2872,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1517444115}
   m_GameObject: {fileID: 1237722001}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -2844,6 +2965,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &1237722009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 1517444115}
+  m_GameObject: {fileID: 1237722001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1001 &1249474573
 Prefab:
   m_ObjectHideFlags: 0
@@ -3030,9 +3165,10 @@ GameObject:
   - 95: {fileID: 1411049760}
   - 114: {fileID: 1411049759}
   - 135: {fileID: 1411049758}
+  - 114: {fileID: 1411049764}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3122,6 +3258,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
+--- !u!114 &1411049764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 2088365640}
+  m_GameObject: {fileID: 1411049757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0
 --- !u!1 &1412481068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3136,6 +3286,7 @@ GameObject:
   - 135: {fileID: 1412481070}
   - 54: {fileID: 1412481069}
   - 114: {fileID: 1412481071}
+  - 114: {fileID: 1412481076}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -3151,7 +3302,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 915457647}
   m_GameObject: {fileID: 1412481068}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -3244,6 +3395,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
+--- !u!114 &1412481076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 915457647}
+  m_GameObject: {fileID: 1412481068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1001 &1517444115
 Prefab:
   m_ObjectHideFlags: 0
@@ -3306,6 +3471,7 @@ GameObject:
   - 135: {fileID: 1537001607}
   - 54: {fileID: 1537001613}
   - 114: {fileID: 1537001608}
+  - 114: {fileID: 1537001614}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -3406,7 +3572,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1249474573}
   m_GameObject: {fileID: 1537001606}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -3414,6 +3580,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &1537001614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 1249474573}
+  m_GameObject: {fileID: 1537001606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1 &1634414884
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,9 +3607,10 @@ GameObject:
   - 95: {fileID: 1634414887}
   - 114: {fileID: 1634414886}
   - 135: {fileID: 1634414885}
+  - 114: {fileID: 1634414891}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3519,6 +3700,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &1634414891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 1172866493}
+  m_GameObject: {fileID: 1634414884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0
 --- !u!1 &1686761039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,6 +3728,7 @@ GameObject:
   - 135: {fileID: 1686761041}
   - 54: {fileID: 1686761040}
   - 114: {fileID: 1686761042}
+  - 114: {fileID: 1686761047}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -3548,7 +3744,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 745966089}
   m_GameObject: {fileID: 1686761039}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -3641,6 +3837,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
+--- !u!114 &1686761047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 745966089}
+  m_GameObject: {fileID: 1686761039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1001 &1752781011
 Prefab:
   m_ObjectHideFlags: 0
@@ -3703,6 +3913,7 @@ GameObject:
   - 114: {fileID: 1771387744}
   - 64: {fileID: 1771387748}
   - 114: {fileID: 1771387749}
+  - 114: {fileID: 1771387750}
   m_Layer: 0
   m_Name: Hover
   m_TagString: Player
@@ -3774,7 +3985,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
   m_PrefabInternal: {fileID: 1001237637}
   m_GameObject: {fileID: 1771387742}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
   m_LocalPosition: {x: 5.18402767, y: 2, z: -5.76830244}
   m_LocalScale: {x: .659999967, y: 1, z: 1}
   m_Children:
@@ -3808,6 +4019,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingEnergy: 100
   CurrentEnergy: 0
+--- !u!114 &1771387750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771387742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4032f92f38d1394dbc366ea39b11e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Missile: {fileID: 100000, guid: c64d9dbe1391fb047b6b970f64564a26, type: 2}
 --- !u!1 &1890820933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3885,6 +4108,7 @@ GameObject:
   - 135: {fileID: 1971138449}
   - 54: {fileID: 1971138448}
   - 114: {fileID: 1971138450}
+  - 114: {fileID: 1971138455}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -3900,7 +4124,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 133329430}
   m_GameObject: {fileID: 1971138447}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -3993,6 +4217,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!114 &1971138455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 133329430}
+  m_GameObject: {fileID: 1971138447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1 &2024759366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4007,6 +4245,7 @@ GameObject:
   - 135: {fileID: 2024759368}
   - 54: {fileID: 2024759367}
   - 114: {fileID: 2024759369}
+  - 114: {fileID: 2024759374}
   m_Layer: 0
   m_Name: UFO
   m_TagString: Untagged
@@ -4022,7 +4261,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1752781011}
   m_GameObject: {fileID: 2024759366}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -4115,6 +4354,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+--- !u!114 &2024759374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757,
+    type: 2}
+  m_PrefabInternal: {fileID: 1752781011}
+  m_GameObject: {fileID: 2024759366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 50
+  CurrentEnergy: 0
 --- !u!1001 &2041962308
 Prefab:
   m_ObjectHideFlags: 0
@@ -4220,9 +4473,10 @@ GameObject:
   - 95: {fileID: 2083651206}
   - 114: {fileID: 2083651205}
   - 135: {fileID: 2083651204}
+  - 114: {fileID: 2083651210}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4312,6 +4566,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+--- !u!114 &2083651210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 496402725}
+  m_GameObject: {fileID: 2083651203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0
 --- !u!1001 &2088365640
 Prefab:
   m_ObjectHideFlags: 0
@@ -4369,9 +4637,10 @@ GameObject:
   - 95: {fileID: 2137039388}
   - 114: {fileID: 2137039387}
   - 135: {fileID: 2137039386}
+  - 114: {fileID: 2137039392}
   m_Layer: 9
   m_Name: Isoid
-  m_TagString: Untagged
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4461,3 +4730,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!114 &2137039392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 2b53e097d5657534fb23952fac3a4323,
+    type: 2}
+  m_PrefabInternal: {fileID: 783169393}
+  m_GameObject: {fileID: 2137039385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 20
+  CurrentEnergy: 0

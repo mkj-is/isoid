@@ -10,5 +10,22 @@ public class UFOMover : MonoBehaviour {
 	void FixedUpdate () {
 		transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
 		transform.Translate(new Vector3(0, 0, Mathf.Sin(Time.realtimeSinceStartup * wobbleSpeed)) * wobbleMagnitude);
+
+
+		//Destrukce při nulové energii
+		if (GetComponent<Energy> ().CurrentEnergy < 0) {
+			Destroy ();
+		}
+	}
+
+	void Destroy(){
+		Destroy (gameObject);
+	}
+
+	void OnTriggerEnter(Collider other){
+		if (other.tag == "Missile") {
+			GetComponent<Energy>().CurrentEnergy -= other.GetComponent<MissileScript>().DestructionForce;
+			Destroy(other.gameObject);
+		}
 	}
 }
