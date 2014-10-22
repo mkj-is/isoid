@@ -12,7 +12,7 @@ Shader "WireFrameTransparent"
         {
             Blend SrcAlpha OneMinusSrcAlpha
             Cull Back
-            ZWrite Off
+            ZWrite On
 			CGPROGRAM
 			
 			#pragma vertex vert
