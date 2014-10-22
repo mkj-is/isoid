@@ -3702,6 +3702,7 @@ GameObject:
   - 54: {fileID: 1771387743}
   - 114: {fileID: 1771387744}
   - 64: {fileID: 1771387748}
+  - 114: {fileID: 1771387749}
   m_Layer: 0
   m_Name: Hover
   m_TagString: Player
@@ -3794,6 +3795,19 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
+--- !u!114 &1771387749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1771387742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingEnergy: 100
+  CurrentEnergy: 0
 --- !u!1 &1890820933
 GameObject:
   m_ObjectHideFlags: 0

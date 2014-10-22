@@ -54,6 +54,10 @@ public class PlayerMovement : MonoBehaviour {
 
 	//Provizorní --> musí se změnit
 	void OnTriggerEnter(Collider other){
-		Destroy (other.gameObject);
+		if (other.tag == "Isoid") {
+			float energyLeft = other.GetComponent<Energy>().CurrentEnergy;
+			this.GetComponent<Energy>().CurrentEnergy += energyLeft;
+			Destroy (other.gameObject);
+		}
 	}
 }
