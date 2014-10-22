@@ -13,6 +13,13 @@ public class Energy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Destrukce při nulové energii
+		if (GetComponent<Energy> ().CurrentEnergy <= 0) {
+			Destroy ();
+		}
+	}
 	
+	void Destroy(){
+		Destroy (gameObject);
 	}
 }
