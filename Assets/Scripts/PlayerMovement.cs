@@ -51,6 +51,8 @@ public class PlayerMovement : MonoBehaviour {
         //transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime * h);
     }
 
+
+	//Provizorní --> musí se změnit
 	void OnTriggerEnter(Collider other){
 		Destroy (other.gameObject);
 	}
