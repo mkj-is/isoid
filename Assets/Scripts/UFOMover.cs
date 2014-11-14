@@ -8,8 +8,8 @@ public class UFOMover : MonoBehaviour {
 	public float wobbleMagnitude = 0.001f;
 	
 	void FixedUpdate () {
-		transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
-		transform.Translate(new Vector3(0, 0, Mathf.Sin(Time.realtimeSinceStartup * wobbleSpeed)) * wobbleMagnitude);
+		//transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
+		//transform.Translate(new Vector3(0, 0, Mathf.Sin(Time.realtimeSinceStartup * wobbleSpeed)) * wobbleMagnitude);
 
 	}
 
