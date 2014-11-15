@@ -10,11 +10,11 @@ public class UfoAi : MonoBehaviour {
         CircleAndShoot,
     }
 
-    public float speed;
-    public float maxSpeed;
-    public float circleSpeed;
-    public float maxCircleSpeed;
-    public int playerDistance;
+    public float speed = 20f;
+    public float maxSpeed = 5f;
+    public float circleSpeed = 20f;
+    public float maxCircleSpeed = 5f;
+    public int playerDistance = 12;
     public float rotationSpeed = 30f;
 
     private UFOState state;
@@ -24,12 +24,6 @@ public class UfoAi : MonoBehaviour {
     //Use this for initialization
     void Start()
     {
-        speed = 5;
-        maxSpeed = 5;
-        circleSpeed = 20;
-        maxCircleSpeed = 5;
-        playerDistance = 10;
-
         if (Random.value > 0.5)
             rotationDirection = 1;
         else
@@ -89,7 +83,7 @@ public class UfoAi : MonoBehaviour {
                 rotationDirection *= -1;
 
             //stop approach
-            rigidbody.drag = 1500;
+            rigidbody.drag = 1000;
             //rotationSpeed *= 2;
         }
 
@@ -100,8 +94,9 @@ public class UfoAi : MonoBehaviour {
     {
         rigidbody.AddForce((player.transform.position - this.transform.position) * Time.deltaTime * speed);
 
+        //maxSpeed
         if (rigidbody.velocity.magnitude > maxSpeed)
-            rigidbody.velocity *= 0.9f;
+            rigidbody.velocity *= 0.8f;
     }
 
     private void CircleAroundPlayer()
@@ -111,8 +106,9 @@ public class UfoAi : MonoBehaviour {
         Vector3 perpandicular = Vector3.Cross(player.transform.position - this.transform.position, Vector3.up);
         rigidbody.AddForce(perpandicular * Time.deltaTime * circleSpeed * rotationDirection);
 
+        //maxSpeed
         if (rigidbody.velocity.magnitude > maxCircleSpeed)
-            rigidbody.velocity *= 0.9f;
+            rigidbody.velocity *= 0.8f;
 
         if (Vector3.Distance(this.transform.position, player.transform.position) <= playerDistance - 2)
         {

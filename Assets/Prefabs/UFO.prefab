@@ -13,7 +13,6 @@ GameObject:
   - 95: {fileID: 9500000}
   - 135: {fileID: 13500000}
   - 54: {fileID: 5400000}
-  - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400004}
   m_Layer: 0
@@ -105,20 +104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingEnergy: 50
   CurrentEnergy: 0
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 30
-  wobbleSpeed: 4
-  wobbleMagnitude: .00999999978
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,11 +115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde9906502020244dbe5cfd0090778dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 150
   maxSpeed: 5
   circleSpeed: 20
   maxCircleSpeed: 5
-  playerDistance: 10
+  playerDistance: 12
   rotationSpeed: 30
 --- !u!135 &13500000
 SphereCollider:
