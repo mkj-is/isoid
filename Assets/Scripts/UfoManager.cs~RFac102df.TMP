@@ -1,0 +1,23 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class UfoManager : MonoBehaviour {
+
+    public float spawnTime = 3f;
+    public float spawnDistance = 15f;
+    public GameObject enemy;
+
+    private GameObject player;
+
+	// Use this for initialization
+	void Start () {
+        player = GameObject.FindGameObjectWithTag("Player");
+        InvokeRepeating("Spawn", spawnTime, spawnTime);
+	}
+
+    void Spawn()
+    {
+        Vector3 distanceVector = new Vector3(player.transform.position.x + spawnDistance, player.transform.position.y, player.transform.position.z);
+        Instantiate(enemy, player.transform.position, player.transform.rotation);
+    }
+}

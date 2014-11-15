@@ -69,7 +69,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -130,12 +130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde9906502020244dbe5cfd0090778dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  circleSpeed: 25
-  playerDistance: 12
+  speed: 5
+  maxSpeed: 5
+  circleSpeed: 20
+  maxCircleSpeed: 5
+  playerDistance: 10
   rotationSpeed: 30
-  wobbleSpeed: 4
-  wobbleMagnitude: .00999999978
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
