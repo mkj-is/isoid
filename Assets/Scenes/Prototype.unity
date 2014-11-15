@@ -1497,6 +1497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingEnergy: 100
   CurrentEnergy: 0
+  energyDecreaseRate: 2
 --- !u!114 &1771387750
 MonoBehaviour:
   m_ObjectHideFlags: 0
