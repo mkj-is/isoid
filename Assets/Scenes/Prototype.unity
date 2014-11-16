@@ -1340,7 +1340,7 @@ Camera:
   far clip plane: 1000
   field of view: 30
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1509,8 +1509,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4032f92f38d1394dbc366ea39b11e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Missile: {fileID: 100000, guid: c64d9dbe1391fb047b6b970f64564a26, type: 2}
-  EnergyCosts: 5
+  missile: {fileID: 100000, guid: c64d9dbe1391fb047b6b970f64564a26, type: 2}
+  energyCosts: 1
+  fireRate: .0500000007
 --- !u!1 &1890820933
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,8 +18,32 @@ public class PlayerMovement : MonoBehaviour {
 
     void FixedUpdate()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        float h = 0;
+        float v = 0;
+
+        if (Application.platform == RuntimePlatform.MetroPlayerARM)
+        {
+            Touch touch1 = Input.GetTouch(0);
+            Touch touch2 = Input.GetTouch(1);
+
+            if (touch1.position.y < Screen.width / 2)
+            {
+                h = -1;
+            }
+            else if (touch1.position.y > 0 && touch2.position.y > 0)
+            {
+                v = 1;
+            }
+            else
+            {
+                h = 1;
+            }
+        }
+        else
+        {
+            h = Input.GetAxisRaw("Horizontal");
+            v = Input.GetAxisRaw("Vertical");
+        }
 
         Move(v);
 
