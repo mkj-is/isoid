@@ -4,7 +4,7 @@ using System.Collections;
 public class UfoManager : MonoBehaviour {
 
     public float spawnTime = 3f;
-    public float spawnDistance = 15f;
+    public float spawnDistance = 20f;
     public float spawnRandomDistance = 5f;
     public GameObject enemy;
 

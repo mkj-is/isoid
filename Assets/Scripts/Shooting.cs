@@ -28,4 +28,13 @@ public class Shooting : MonoBehaviour {
 		//newMissile.GetComponent<Rigidbody> ().velocity = rigidbody.velocity;
 		//newMissile.GetComponent<Rigidbody> ().AddForce (transform.forward * 200000 * Time.deltaTime);
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Missile")
+        {
+            GetComponent<Energy>().CurrentEnergy -= other.GetComponent<MissileScript>().DestructionForce / 2;
+            Destroy(other.gameObject);
+        }
+    }
 }

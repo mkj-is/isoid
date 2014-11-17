@@ -21,7 +21,10 @@ public class Pulse : MonoBehaviour {
 	void FixedUpdate () {
         counter += Time.deltaTime * speed;
         multiplier = (Mathf.Sin(counter) * pulseSize) + averageSize;
-        transform.localScale = Vector3.one * multiplier;
+        float energySize = GetComponent<Energy>().CurrentEnergy / GetComponent<Energy>().StartingEnergy;
+
+        transform.localScale = Vector3.one * multiplier * energySize;
+
         if (counter > 180)
             counter = 0;
 

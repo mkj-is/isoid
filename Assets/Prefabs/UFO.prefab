@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingEnergy: 50
   CurrentEnergy: 0
+  energyDecreaseRate: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,8 +120,11 @@ MonoBehaviour:
   maxSpeed: 5
   circleSpeed: 20
   maxCircleSpeed: 5
-  playerDistance: 12
+  movingDistance: 12
   rotationSpeed: 30
+  shootingDistance: 15
+  fireRate: 1.5
+  missile: {fileID: 100000, guid: c64d9dbe1391fb047b6b970f64564a26, type: 2}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
