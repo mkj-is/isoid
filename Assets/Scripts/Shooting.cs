@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey ("v") && Time.time > nextFire) {
+		if ((Input.GetAxis ("Fire1")==1 ) && Time.time > nextFire) {
             nextFire = Time.time + fireRate;
 			Fire ();
 			GetComponent<Energy>().CurrentEnergy -=energyCosts;

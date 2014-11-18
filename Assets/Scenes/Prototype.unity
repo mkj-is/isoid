@@ -1199,6 +1199,140 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1771387747}
   m_RootOrder: 1
+--- !u!1 &792719956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 792719958}
+  - 114: {fileID: 792719957}
+  - 114: {fileID: 792719959}
+  m_Layer: 0
+  m_Name: GUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &792719957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792719956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1eebea0e966a9e4486192ff3f9af44c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radarLocation: 5
+  radarLocationCustom: {x: 0, y: 0}
+  radarType: 1
+  radarBackgroundA: {r: .154411793, g: .154411793, b: .154411793, a: 1}
+  radarBackgroundB: {r: 0, g: 0, b: 0, a: 1}
+  radarTexture: {fileID: 0}
+  radarSize: .200000003
+  radarZoom: 1.20000005
+  radarCenterActive: 1
+  radarCenterColor: {r: 255, g: 255, b: 255, a: 1}
+  radarCenterTag: Player
+  radarBlip1Active: 1
+  radarBlip1Color: {r: 1, g: 0, b: 0, a: 1}
+  radarBlip1Tag: Enemy
+  radarBlip2Active: 1
+  radarBlip2Color: {r: 0, g: 255, b: 0, a: 1}
+  radarBlip2Tag: Isoid
+  radarBlip3Active: 0
+  radarBlip3Color: {r: 255, g: 0, b: 0, a: 1}
+  radarBlip3Tag: 
+  radarBlip4Active: 0
+  radarBlip4Color: {r: 255, g: 0, b: 255, a: 1}
+  radarBlip4Tag: 
+--- !u!4 &792719958
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792719956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.59871435, y: 2.10313654, z: -5.00826979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!114 &792719959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792719956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7413b27d329ea49a7a4ff5ce177e9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1771387742}
+  guiLay:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 12800000, guid: 970b917543a4e4be6b9f26ed57823493, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 1
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
 --- !u!1 &904307220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,7 +1355,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 904307220}
   m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
-  m_LocalPosition: {x: -.394279391, y: .00109287992, z: .345969677}
+  m_LocalPosition: {x: -.394279391, y: .00109287992, z: .659473419}
   m_LocalScale: {x: 1, y: 1.51515126, z: 1}
   m_Children: []
   m_Father: {fileID: 1771387747}
@@ -1408,7 +1542,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: .5
-  m_AngularDrag: 1.5
+  m_AngularDrag: 2
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1495,9 +1629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingEnergy: 10000
+  StartingEnergy: 1000
   CurrentEnergy: 0
-  energyDecreaseRate: 2
+  energyDecreaseRate: 1
 --- !u!114 &1771387750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,8 +1644,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile: {fileID: 100000, guid: c64d9dbe1391fb047b6b970f64564a26, type: 2}
-  energyCosts: 1
-  fireRate: .0500000007
+  energyCosts: 5
+  fireRate: .100000001
 --- !u!1 &1890820933
 GameObject:
   m_ObjectHideFlags: 0

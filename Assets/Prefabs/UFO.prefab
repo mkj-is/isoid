@@ -17,7 +17,7 @@ GameObject:
   - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: UFO
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: e96a4e0593c4f46e594e285dd7b5a52b, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0

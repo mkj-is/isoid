@@ -76,12 +76,6 @@ public class PlayerMovement : MonoBehaviour
         //transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime * h);
     }
 
-
-    void OnGUI()
-    {
-        GUI.Label(new Rect(25, 25, 100, 30), GetComponent<Energy>().CurrentEnergy.ToString("F2"));
-    }
-
     //Provizorní --> musí se změnit
     void OnTriggerEnter(Collider other)
     {

@@ -35,6 +35,11 @@ public class Energy : MonoBehaviour {
     }
 
 	void Destroy(){
-		Destroy (gameObject);
+		if (this.gameObject.tag == "Player") {
+			gameObject.SetActive(false);
+			GameObject.Find("GUI").GetComponent<GraphicUI>().EndGame();
+		} else {
+			Destroy (gameObject);
+		}
 	}
 }
