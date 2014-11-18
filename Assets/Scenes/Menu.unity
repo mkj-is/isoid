@@ -178,7 +178,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 243560197}
-  m_HideIfInvisible: 0
 --- !u!1 &504081172
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +328,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 626185953}
-  m_HideIfInvisible: 0
 --- !u!1 &675486070
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +394,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 675486070}
-  m_HideIfInvisible: 0
 --- !u!1 &769437987
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +460,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 769437987}
-  m_HideIfInvisible: 0
 --- !u!1001 &1177040698
 Prefab:
   m_ObjectHideFlags: 0
@@ -514,6 +510,14 @@ Prefab:
     - target: {fileID: 400000, guid: 98a9df25ae1ac6c47a00140f01199757, type: 2}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 98a9df25ae1ac6c47a00140f01199757, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 98a9df25ae1ac6c47a00140f01199757, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98a9df25ae1ac6c47a00140f01199757, type: 2}
@@ -580,6 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &1210941070
 Transform:
   m_ObjectHideFlags: 0
@@ -641,7 +646,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1242218926}
-  m_HideIfInvisible: 0
 --- !u!224 &1242218929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -672,11 +676,12 @@ GameObject:
   - 95: {fileID: 1409044241}
   - 135: {fileID: 1409044240}
   - 54: {fileID: 1409044239}
-  - 114: {fileID: 1409044238}
   - 114: {fileID: 1409044237}
+  - 114: {fileID: 1409044238}
+  - 114: {fileID: 1409044245}
   m_Layer: 0
   m_Name: UFO
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -688,28 +693,35 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1177040698}
   m_GameObject: {fileID: 1409044236}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   StartingEnergy: 50
   CurrentEnergy: 0
+  energyDecreaseRate: 1
 --- !u!114 &1409044238
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 98a9df25ae1ac6c47a00140f01199757,
+  m_PrefabParentObject: {fileID: 11400004, guid: 98a9df25ae1ac6c47a00140f01199757,
     type: 2}
   m_PrefabInternal: {fileID: 1177040698}
   m_GameObject: {fileID: 1409044236}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec9d53467fde4a7f9a5c84132d95df6, type: 3}
+  m_Script: {fileID: 11500000, guid: dde9906502020244dbe5cfd0090778dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 150
+  maxSpeed: 5
+  circleSpeed: 20
+  maxCircleSpeed: 5
+  movingDistance: 12
   rotationSpeed: 30
-  wobbleSpeed: 4
-  wobbleMagnitude: .00999999978
+  shootingDistance: 15
+  fireRate: 1.5
+  missile: {fileID: 100000, guid: c64d9dbe1391fb047b6b970f64564a26, type: 2}
 --- !u!54 &1409044239
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -718,7 +730,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1177040698}
   m_GameObject: {fileID: 1409044236}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 1
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -747,7 +759,7 @@ Animator:
     type: 2}
   m_PrefabInternal: {fileID: 1177040698}
   m_GameObject: {fileID: 1409044236}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: e96a4e0593c4f46e594e285dd7b5a52b, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -796,6 +808,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1409044245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409044236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ac62242b6284ffcb19b0c8d88b3379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 30
 --- !u!1 &1638676970
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +924,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1638676970}
-  m_HideIfInvisible: 0
 --- !u!1 &1765596320
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +994,7 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!1 &1775463749
@@ -1040,7 +1064,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1775463749}
-  m_HideIfInvisible: 0
 --- !u!1 &2119237045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,7 +1120,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2119237047}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 7808d4d738e5f428885c7d29287656f1, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2119237047
@@ -1127,7 +1161,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2119237045}
-  m_HideIfInvisible: 0
 --- !u!224 &2119237049
 RectTransform:
   m_ObjectHideFlags: 0
