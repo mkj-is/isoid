@@ -27,7 +27,7 @@ public class GraphicUI : MonoBehaviour {
 	void Update(){
 		if (gameOver) {
 			if(Input.anyKeyDown){
-				Application.Quit();
+				Application.LoadLevel("Menu");
 			}
 		}
 	}
