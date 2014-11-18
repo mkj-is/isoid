@@ -28,7 +28,7 @@ public class Pulse : MonoBehaviour {
         if (counter > 180)
             counter = 0;
 
-        if (Vector3.Distance(this.transform.position, player.transform.position) > 1000)
+        if (Vector3.Distance(this.transform.position, player.transform.position) > 200)
         {
             Destroy(this.gameObject);
         }
