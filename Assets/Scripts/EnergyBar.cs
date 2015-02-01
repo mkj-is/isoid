@@ -35,6 +35,6 @@ public class EnergyBar : MonoBehaviour {
 	}
 	
 	void Update () {
-		barFill = Player.GetComponent<Energy> ().CurrentEnergy / 1000.0f;
+		barFill = Player.GetComponent<Energy> ().CurrentEnergy / Player.GetComponent<Energy> ().StartingEnergy;
 	}
 }

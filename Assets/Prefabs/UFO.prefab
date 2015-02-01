@@ -222,8 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingEnergy: 50
   CurrentEnergy: 0
-  energyDecreaseRate: 1
-  deathSound: {fileID: 0}
+  energyDecreaseRate: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

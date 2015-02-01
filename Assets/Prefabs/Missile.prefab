@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTime: 2
-  DestructionForce: 30
+  DestructionForce: 50
   missileSpeed: 30
 --- !u!136 &13600000
 CapsuleCollider:
