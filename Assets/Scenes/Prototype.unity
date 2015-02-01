@@ -1400,16 +1400,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1eebea0e966a9e4486192ff3f9af44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radarLocation: 5
-  radarLocationCustom: {x: 0, y: 0}
+  radarLocation: 9
+  radarLocationCustom: {x: 150, y: 150}
   radarType: 1
-  radarBackgroundA: {r: .154411793, g: .154411793, b: .154411793, a: 1}
-  radarBackgroundB: {r: 0, g: 0, b: 0, a: 1}
+  radarBackgroundA: {r: .16113919, g: .16113919, b: .16113919, a: 1}
+  radarBackgroundB: {r: .103436708, g: .103436708, b: .103436708, a: 1}
   radarTexture: {fileID: 0}
-  radarSize: .200000003
-  radarZoom: 1.20000005
+  radarSize: .100000001
+  radarZoom: 2
   radarCenterActive: 1
-  radarCenterColor: {r: 255, g: 255, b: 255, a: 1}
+  radarCenterColor: {r: .00797748566, g: 0, b: 1, a: 1}
   radarCenterTag: Player
   radarBlip1Active: 1
   radarBlip1Color: {r: 1, g: 0, b: 0, a: 1}
