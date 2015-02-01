@@ -76,9 +76,7 @@ public class UfoAi : MonoBehaviour {
     {
         if (Vector3.Distance(this.transform.position, player.transform.position) > movingDistance + 5)
         {
-            print("He got away!");
             state = UFOState.MoveTowards;
-            //rotationSpeed /= 2;
         }
 
         CircleAroundPlayer();
@@ -133,4 +131,10 @@ public class UfoAi : MonoBehaviour {
         }
 
     }
+
+	void OnDestroy()
+	{
+		GameObject audioPlayer = GameObject.FindGameObjectWithTag("Sound");
+		audioPlayer.GetComponents<AudioSource> () [0].Play ();
+	}
 }
