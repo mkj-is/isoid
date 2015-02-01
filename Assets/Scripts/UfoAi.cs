@@ -88,7 +88,6 @@ public class UfoAi : MonoBehaviour {
     {
         if (Vector3.Distance(this.transform.position, player.transform.position) <= Random.Range(movingDistance - 5, movingDistance + 5))
         {
-            print("It't the enemy!");
             state = UFOState.CircleAndShoot;
 
             //determine rotation direction
