@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed = 10f;
     public float height = 2f;
 
+	public AudioSource pickupSound;
+
     Rigidbody playerRigidBody;
     ParticleSystem exhaustParticles;
 
@@ -81,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.tag == "Isoid")
         {
+			pickupSound.Play();
             float energyLeft = other.GetComponent<Energy>().CurrentEnergy;
             this.GetComponent<Energy>().CurrentEnergy += energyLeft;
             Destroy(other.gameObject);
