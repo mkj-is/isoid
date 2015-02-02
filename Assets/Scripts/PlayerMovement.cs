@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        //Time.timeScale = 1;
+        Time.timeScale = 1;
 
         playerRigidBody = GetComponent<Rigidbody>();
         exhaustParticles = GetComponentInChildren<ParticleSystem>();

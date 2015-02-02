@@ -38,6 +38,16 @@ public class GraphicUI : MonoBehaviour {
 		gameOver = true;
 		endTime = Time.realtimeSinceStartup;
         finalScore = ScoreManager.score;
+        StoreHighScore(finalScore);
         //Time.timeScale = 0;
 	}
+
+    void StoreHighScore(float newScore)
+    {
+        float oldHighscore = PlayerPrefs.GetFloat("highscore", 0f);
+        if (newScore > oldHighscore)
+        {
+            PlayerPrefs.SetFloat("highscore", newScore);
+        }
+    }
 }
