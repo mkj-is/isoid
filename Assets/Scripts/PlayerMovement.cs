@@ -88,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
 			pickupSound.Play();
             float energyLeft = other.GetComponent<Energy>().CurrentEnergy;
             this.GetComponent<Energy>().CurrentEnergy += energyLeft;
+			ScoreManager.score += energyLeft;
             Destroy(other.gameObject);
         }
     }

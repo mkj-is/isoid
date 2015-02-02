@@ -3,10 +3,14 @@ using System.Collections;
 
 public class ScoreManager : MonoBehaviour {
 
-    public static int score;
+    public static float score;
 
 	// Use this for initialization
 	void Awake () {
-        score = 0;
+        score = 0f;
+	}
+
+	void FixedUpdate () {
+		score += 0.1f;
 	}
 }
