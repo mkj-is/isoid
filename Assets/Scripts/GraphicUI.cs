@@ -7,6 +7,7 @@ public class GraphicUI : MonoBehaviour {
 	private bool gameOver;
 	private float endTime;
 	public GUIStyle guiLay;
+    private int finalScore;
 
 	void Start(){
 		gameOver = false;
@@ -23,7 +24,7 @@ public class GraphicUI : MonoBehaviour {
 			guiLay.fontSize=25;
 			GUI.Label (new Rect ((Screen.width/2)-50,(Screen.height/2),200,80),"Time: "+endTime.ToString("F1"),guiLay);
             guiLay.fontSize = 25;
-            GUI.Label(new Rect((Screen.width / 2) - 50, (Screen.height / 2) + 100, 200, 80), "Score: " + ScoreManager.score, guiLay);
+            GUI.Label(new Rect((Screen.width / 2) - 50, (Screen.height / 2) + 100, 200, 80), "Score: " + finalScore, guiLay);
 		}
 	}
 	void Update(){
@@ -37,6 +38,7 @@ public class GraphicUI : MonoBehaviour {
 	public void EndGame(){
 		gameOver = true;
 		endTime = Time.realtimeSinceStartup;
-        Time.timeScale = 0;
+        finalScore = ScoreManager.score;
+        //Time.timeScale = 0;
 	}
 }
