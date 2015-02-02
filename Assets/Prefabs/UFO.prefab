@@ -223,7 +223,7 @@ MonoBehaviour:
   StartingEnergy: 50
   CurrentEnergy: 0
   energyDecreaseRate: 0
-  score: 0
+  score: 10
   explosion: {fileID: 163582, guid: 2155806d05ef43e45bf7720380296b28, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
