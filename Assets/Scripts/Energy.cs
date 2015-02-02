@@ -8,6 +8,8 @@ public class Energy : MonoBehaviour {
 
     public float energyDecreaseRate = 1f;
 
+    public int score = 0;
+
 	// Use this for initialization
 	void Start () {
 		CurrentEnergy = StartingEnergy;
@@ -42,7 +44,13 @@ public class Energy : MonoBehaviour {
 		if (this.gameObject.tag == "Player") {
 			gameObject.SetActive(false);
 			GameObject.Find("GUI").GetComponent<GraphicUI>().EndGame();
-		} else {
+        }
+        else if (this.gameObject.tag == "Enemy")
+        {
+            ScoreManager.score += score;
+            Destroy(gameObject);
+        }
+        else {
 			Destroy (gameObject);
 		}
 	}

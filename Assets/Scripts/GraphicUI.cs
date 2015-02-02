@@ -22,6 +22,8 @@ public class GraphicUI : MonoBehaviour {
 			GUI.Label (new Rect ((Screen.width/2)-100,(Screen.height/2)-100,200,80),"GAME OVER", guiLay);
 			guiLay.fontSize=25;
 			GUI.Label (new Rect ((Screen.width/2)-50,(Screen.height/2),200,80),"Time: "+endTime.ToString("F1"),guiLay);
+            guiLay.fontSize = 25;
+            GUI.Label(new Rect((Screen.width / 2) - 50, (Screen.height / 2) + 100, 200, 80), "Score: " + ScoreManager.score, guiLay);
 		}
 	}
 	void Update(){
@@ -35,5 +37,6 @@ public class GraphicUI : MonoBehaviour {
 	public void EndGame(){
 		gameOver = true;
 		endTime = Time.realtimeSinceStartup;
+        Time.timeScale = 0;
 	}
 }
