@@ -6,15 +6,29 @@ public class Shooting : MonoBehaviour {
 	public GameObject missile;
 	public float energyCosts = 5f;
     public float fireRate = 0.2f;
+	public float startingEnergy = 100f;
+	public float currentEnergy = 100f;
+	public float refillRate = 0.5f;
 
     private float nextFire;
 
+	void OnStart() {
+		currentEnergy = startingEnergy;
+	}
+
 	// Update is called once per frame
 	void Update () {
-		if ((Input.GetAxis ("Fire1")==1 ) && Time.time > nextFire) {
+		if ((Input.GetAxis ("Fire1")==1 ) && Time.time > nextFire && currentEnergy - energyCosts > 0f) {
             nextFire = Time.time + fireRate;
 			Fire ();
-			GetComponent<Energy>().CurrentEnergy -=energyCosts;
+			currentEnergy -=energyCosts;
+		}
+	}
+
+	void FixedUpdate() {
+		currentEnergy += refillRate;
+		if (currentEnergy > startingEnergy) {
+			currentEnergy = startingEnergy;
 		}
 	}
 
