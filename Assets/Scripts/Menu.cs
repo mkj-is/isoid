@@ -6,7 +6,7 @@ public class Menu : MonoBehaviour {
 
     void Start()
     {
-        GameObject.Find("Highscore").GetComponent<Text>().text = "Highscore: " + PlayerPrefs.GetFloat("highscore", 0).ToString("0");
+        GameObject.Find("Highscore").GetComponent<Text>().text = "Highscore: " + PlayerPrefs.GetFloat("highscore", 0).ToString("00000");
     }
 
 	public void StartGame() {
