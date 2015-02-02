@@ -10,6 +10,8 @@ public class Energy : MonoBehaviour {
 
     public int score = 0;
 
+    public GameObject explosion;
+
 	// Use this for initialization
 	void Start () {
 		CurrentEnergy = StartingEnergy;
@@ -47,6 +49,9 @@ public class Energy : MonoBehaviour {
         }
         else if (this.gameObject.tag == "Enemy")
         {
+            //Instantiate and destroy explosion
+            Object.Destroy(Instantiate(explosion, this.transform.position, this.transform.rotation), 1);
+
             ScoreManager.score += score;
             Destroy(gameObject);
         }
