@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
             float energyLeft = other.GetComponent<Energy>().CurrentEnergy;
             this.GetComponent<Energy>().CurrentEnergy += energyLeft;
 			ScoreManager.score += energyLeft;
+			this.GetComponent<Shooting>().currentEnergy = this.GetComponent<Shooting>().startingEnergy;
             Destroy(other.gameObject);
         }
     }
