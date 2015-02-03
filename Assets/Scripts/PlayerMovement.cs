@@ -92,5 +92,23 @@ public class PlayerMovement : MonoBehaviour
 			this.GetComponent<Shooting>().currentEnergy = this.GetComponent<Shooting>().startingEnergy;
             Destroy(other.gameObject);
         }
+        else if (other.tag == "PowerupNocost")
+        {
+            this.GetComponent<Shooting>().nocostPickup();
+
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "PowerupFirerate")
+        {
+            this.GetComponent<Shooting>().fireratePickup();
+
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "PowerupSplit")
+        {
+            this.GetComponent<Shooting>().splitPickup();
+
+            Destroy(other.gameObject);
+        }
     }
 }

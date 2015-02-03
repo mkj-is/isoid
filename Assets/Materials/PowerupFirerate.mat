@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: IsoidTransparent
+  m_Name: PowerupFirerate
   m_Shader: {fileID: 4800000, guid: bce2f9931249c6b458cbf80583bca87e, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -20,22 +20,7 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _BumpMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
-      data:
-        first:
-          name: _Cutoff
-        second: .464285702
-      data:
-        first:
-          name: _Shininess
-        second: .699999988
       data:
         first:
           name: _LineWidth
@@ -44,20 +29,12 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .838235259, g: .0431444533, b: .0431444533, a: 0}
-      data:
-        first:
-          name: _SpecColor
-        second: {r: 1, g: 1, b: 1, a: 0}
-      data:
-        first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _LineColor
-        second: {r: .0431372561, g: .639215708, b: .196078435, a: 1}
+        second: {r: 1, g: 0, b: .505882263, a: 1}
       data:
         first:
           name: _GridColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 0}

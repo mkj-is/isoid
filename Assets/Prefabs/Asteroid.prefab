@@ -15,8 +15,6 @@ GameObject:
   - 54: {fileID: 5459632}
   - 114: {fileID: 11413404}
   - 114: {fileID: 11413406}
-  - 114: {fileID: 11459098}
-  - 114: {fileID: 11459632}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Asteroid
@@ -119,31 +117,6 @@ MonoBehaviour:
   rotationMagnitude: 5
   speed: 100
   randomScale: .300000012
---- !u!114 &11459098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d7bfbb7498e4f5187c6196524c9bd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationMagnitude: 5
-  speed: 5
---- !u!114 &11459632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 159632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beee79f9cfcc540d48db9195314b6e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  magnitude: 2.5
 --- !u!135 &13559632
 SphereCollider:
   m_ObjectHideFlags: 1

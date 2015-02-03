@@ -6,7 +6,7 @@ public class ObjectManager : MonoBehaviour {
 	public float spawnTime = 3f;
 	public float spawnDistance = 15f;
 	public float spawnRandomDistance = 5f;
-	public GameObject isoid;
+	public GameObject spawnedObject;
 	
 	private GameObject player;
 	
@@ -19,7 +19,7 @@ public class ObjectManager : MonoBehaviour {
 	
 	void Spawn()
 	{
-		Instantiate(isoid, RandomCircle(player.transform.position, Random.Range(spawnDistance - spawnRandomDistance, spawnDistance + spawnRandomDistance)), Quaternion.Euler(-90, 0, 0));
+        Instantiate(spawnedObject, RandomCircle(player.transform.position, Random.Range(spawnDistance - spawnRandomDistance, spawnDistance + spawnRandomDistance)), Quaternion.Euler(-90, 0, 0));
 	}
 	
 	Vector3 RandomCircle(Vector3 center, float radius)

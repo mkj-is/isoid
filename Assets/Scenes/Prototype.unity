@@ -156,11 +156,11 @@ Transform:
   m_PrefabInternal: {fileID: 1779074599}
   m_GameObject: {fileID: 271199818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75316703, y: -.0195088387, z: .157255888}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &334926190
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &369842656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2084,11 +2084,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile: {fileID: 100000, guid: c64d9dbe1391fb047b6b970f64564a26, type: 2}
-  energyCosts: 15
-  fireRate: .100000001
+  defaultEnergyCosts: 5
+  defaultFirerate: .100000001
   startingEnergy: 100
   currentEnergy: 100
   refillRate: .5
+  nocostDuration: 5
+  firerateDuration: 5
+  splitDuration: 5
+  splitDegrees: 20
 --- !u!82 &1771387751
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2214,15 +2218,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: bfdd8f1508deddc4a97939a7e39b8548, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.75316703
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bfdd8f1508deddc4a97939a7e39b8548, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.0195088387
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bfdd8f1508deddc4a97939a7e39b8548, type: 2}
       propertyPath: m_LocalPosition.z
-      value: .157255888
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bfdd8f1508deddc4a97939a7e39b8548, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2340,6 +2344,9 @@ GameObject:
   - 114: {fileID: 2034621345}
   - 114: {fileID: 2034621347}
   - 114: {fileID: 2034621346}
+  - 114: {fileID: 2034621343}
+  - 114: {fileID: 2034621344}
+  - 114: {fileID: 2034621348}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2375,6 +2382,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &2034621343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034621340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621cb27574ac949d9ac4a24cdd8370e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 20
+  spawnDistance: 30
+  spawnRandomDistance: 5
+  spawnedObject: {fileID: 132966, guid: e0d0c85c4e25649429ea50e1046e9ac7, type: 2}
+--- !u!114 &2034621344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034621340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621cb27574ac949d9ac4a24cdd8370e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 20
+  spawnDistance: 30
+  spawnRandomDistance: 5
+  spawnedObject: {fileID: 176200, guid: 93a7c92eaa68b2e47a805ffeea2560b3, type: 2}
 --- !u!114 &2034621345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2400,7 +2437,7 @@ MonoBehaviour:
   spawnTime: 3
   spawnDistance: 50
   spawnRandomDistance: 5
-  isoid: {fileID: 159632, guid: 2b13724f85a384e9cb987ea5adbdbab3, type: 2}
+  spawnedObject: {fileID: 159632, guid: 2b13724f85a384e9cb987ea5adbdbab3, type: 2}
 --- !u!114 &2034621347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2415,4 +2452,19 @@ MonoBehaviour:
   spawnTime: 3
   spawnDistance: 50
   spawnRandomDistance: 30
-  isoid: {fileID: 100000, guid: 2b53e097d5657534fb23952fac3a4323, type: 2}
+  spawnedObject: {fileID: 100000, guid: 2b53e097d5657534fb23952fac3a4323, type: 2}
+--- !u!114 &2034621348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034621340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621cb27574ac949d9ac4a24cdd8370e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 20
+  spawnDistance: 30
+  spawnRandomDistance: 5
+  spawnedObject: {fileID: 176062, guid: 5635ebac073dd194483f83f991463bc2, type: 2}

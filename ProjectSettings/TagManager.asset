@@ -10,6 +10,9 @@ TagManager:
   - Missile
   - Sound
   - Score
+  - PowerupNocost
+  - PowerupFirerate
+  - PowerupSplit
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
