@@ -6,7 +6,8 @@ public class UfoManager : MonoBehaviour {
     public float spawnTime = 3f;
     public float spawnDistance = 20f;
     public float spawnRandomDistance = 5f;
-    public GameObject enemy;
+    public GameObject basicEnemy;
+	public GameObject mediumEnemy;
 
     private GameObject player;
 
@@ -18,6 +19,10 @@ public class UfoManager : MonoBehaviour {
 
     void Spawn()
     {
+		GameObject enemy = basicEnemy;
+		if (Time.timeSinceLevelLoad > 15.0 && Random.Range (0.0f, 1.0f) > 0.5f) {
+			enemy = mediumEnemy;
+		}
         Instantiate(enemy, RandomCircle(player.transform.position, Random.Range(spawnDistance - spawnRandomDistance, spawnDistance + spawnRandomDistance)), Quaternion.Euler(-90, 0, 0));
     }
 

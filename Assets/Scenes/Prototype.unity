@@ -246,7 +246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &369842656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2042,7 +2042,7 @@ Transform:
   - {fileID: 904307221}
   - {fileID: 541351911}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!64 &1771387748
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2242,7 +2242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bfdd8f1508deddc4a97939a7e39b8548, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bfdd8f1508deddc4a97939a7e39b8548, type: 2}
       propertyPath: m_Name
@@ -2361,7 +2361,8 @@ MonoBehaviour:
   spawnTime: 3
   spawnDistance: 50
   spawnRandomDistance: 10
-  enemy: {fileID: 100000, guid: 98a9df25ae1ac6c47a00140f01199757, type: 2}
+  basicEnemy: {fileID: 100000, guid: 98a9df25ae1ac6c47a00140f01199757, type: 2}
+  mediumEnemy: {fileID: 107862, guid: d9f90dd1f35084c87a0f25fb01b6eb20, type: 2}
 --- !u!4 &2034621342
 Transform:
   m_ObjectHideFlags: 0
