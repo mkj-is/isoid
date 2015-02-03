@@ -1405,7 +1405,7 @@ MonoBehaviour:
   radarBackgroundB: {r: .103436708, g: .103436708, b: .103436708, a: 1}
   radarTexture: {fileID: 0}
   radarSize: .100000001
-  radarZoom: 2
+  radarZoom: 1
   radarCenterActive: 1
   radarCenterColor: {r: .00797748566, g: 0, b: 1, a: 1}
   radarCenterTag: Player
@@ -1779,28 +1779,28 @@ MonoBehaviour:
   nocost_full:
     m_Name: 
     m_Normal:
-      m_Background: {fileID: 2800000, guid: 967f6fa41a838d14ba8915ed1c5e48c1, type: 3}
+      m_Background: {fileID: 2800000, guid: 705a5259de570954f888c101799f6ebb, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
-      m_Background: {fileID: 2800000, guid: 967f6fa41a838d14ba8915ed1c5e48c1, type: 3}
+      m_Background: {fileID: 2800000, guid: 705a5259de570954f888c101799f6ebb, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Active:
-      m_Background: {fileID: 2800000, guid: 967f6fa41a838d14ba8915ed1c5e48c1, type: 3}
+      m_Background: {fileID: 2800000, guid: 705a5259de570954f888c101799f6ebb, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Focused:
-      m_Background: {fileID: 2800000, guid: 967f6fa41a838d14ba8915ed1c5e48c1, type: 3}
+      m_Background: {fileID: 2800000, guid: 705a5259de570954f888c101799f6ebb, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnNormal:
-      m_Background: {fileID: 2800000, guid: 967f6fa41a838d14ba8915ed1c5e48c1, type: 3}
+      m_Background: {fileID: 2800000, guid: 705a5259de570954f888c101799f6ebb, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnHover:
-      m_Background: {fileID: 2800000, guid: 967f6fa41a838d14ba8915ed1c5e48c1, type: 3}
+      m_Background: {fileID: 2800000, guid: 705a5259de570954f888c101799f6ebb, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnActive:
-      m_Background: {fileID: 2800000, guid: 967f6fa41a838d14ba8915ed1c5e48c1, type: 3}
+      m_Background: {fileID: 2800000, guid: 705a5259de570954f888c101799f6ebb, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_OnFocused:
-      m_Background: {fileID: 2800000, guid: 967f6fa41a838d14ba8915ed1c5e48c1, type: 3}
+      m_Background: {fileID: 2800000, guid: 705a5259de570954f888c101799f6ebb, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Border:
       m_Left: 0
@@ -2163,8 +2163,8 @@ Rigidbody:
   m_GameObject: {fileID: 1771387742}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: .5
-  m_AngularDrag: 2
+  m_Drag: .699999988
+  m_AngularDrag: 5
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2181,8 +2181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961047726ef5b0f46bbbb83bf3abb1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 400
-  rotationSpeed: 200
+  forwardSpeed: 550
+  rotationSpeed: 350
   height: 2
   pickupSound: {fileID: 1771387751}
 --- !u!23 &1771387745
@@ -2252,7 +2252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b91515944ccec4d8712c507e883f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingEnergy: 250
+  StartingEnergy: 400
   CurrentEnergy: 0
   energyDecreaseRate: 2
   score: 0
@@ -2274,9 +2274,9 @@ MonoBehaviour:
   startingEnergy: 100
   currentEnergy: 100
   refillRate: .5
-  nocostDuration: 5
-  firerateDuration: 5
-  splitDuration: 5
+  nocostDuration: 8
+  firerateDuration: 8
+  splitDuration: 8
   splitDegrees: 20
   nocostRemaining: 0
   firerateRemaining: 0
@@ -2638,8 +2638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTime: 3
-  spawnDistance: 50
-  spawnRandomDistance: 30
+  spawnDistance: 40
+  spawnRandomDistance: 10
   spawnedObject: {fileID: 100000, guid: 2b53e097d5657534fb23952fac3a4323, type: 2}
 --- !u!114 &2034621348
 MonoBehaviour:

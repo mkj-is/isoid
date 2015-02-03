@@ -694,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: Arrows for movement     Spacebar for shooting     Collect green Isoids
     to restore energy
-  scrollSpeed: 30
+  scrollSpeed: 40
   textStyle:
     m_Name: 
     m_Normal:

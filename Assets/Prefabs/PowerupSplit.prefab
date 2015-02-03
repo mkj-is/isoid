@@ -145,9 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f0b97c5a8904312ad5d21b5a2d387b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  averageSize: 1
-  pulseSize: .150000006
+  speed: 5
+  averageSize: 1.20000005
+  pulseSize: .0299999993
 --- !u!114 &11476062
 MonoBehaviour:
   m_ObjectHideFlags: 1
