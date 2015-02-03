@@ -160,7 +160,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &334926190
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &369842656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,9 +1419,9 @@ MonoBehaviour:
   radarBlip2Active: 1
   radarBlip2Color: {r: 0, g: 255, b: 0, a: 1}
   radarBlip2Tag: Isoid
-  radarBlip3Active: 0
-  radarBlip3Color: {r: 255, g: 0, b: 0, a: 1}
-  radarBlip3Tag: 
+  radarBlip3Active: 1
+  radarBlip3Color: {r: .509824812, g: .00536656845, b: .00536656845, a: 1}
+  radarBlip3Tag: Asteroid
   radarBlip4Active: 0
   radarBlip4Color: {r: 255, g: 0, b: 255, a: 1}
   radarBlip4Tag: 
@@ -1498,7 +1498,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 970b917543a4e4be6b9f26ed57823493, type: 3}
     m_FontSize: 30
     m_FontStyle: 1
-    m_Alignment: 0
+    m_Alignment: 4
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
@@ -2242,7 +2242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bfdd8f1508deddc4a97939a7e39b8548, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bfdd8f1508deddc4a97939a7e39b8548, type: 2}
       propertyPath: m_Name
@@ -2337,9 +2337,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 2034621342}
   - 114: {fileID: 2034621341}
-  - 114: {fileID: 2034621343}
   - 82: {fileID: 2034621344}
   - 114: {fileID: 2034621345}
+  - 114: {fileID: 2034621347}
+  - 114: {fileID: 2034621346}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2375,21 +2376,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &2034621343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2034621340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f62347d4b4188941bdd0237e10788c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnTime: 3
-  spawnDistance: 50
-  spawnRandomDistance: 30
-  isoid: {fileID: 100000, guid: 2b53e097d5657534fb23952fac3a4323, type: 2}
 --- !u!82 &2034621344
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2459,3 +2445,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c0cb73f9972974d9f0e6b47020b006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2034621346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034621340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621cb27574ac949d9ac4a24cdd8370e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 3
+  spawnDistance: 50
+  spawnRandomDistance: 5
+  isoid: {fileID: 159632, guid: 2b13724f85a384e9cb987ea5adbdbab3, type: 2}
+--- !u!114 &2034621347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034621340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621cb27574ac949d9ac4a24cdd8370e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnTime: 3
+  spawnDistance: 50
+  spawnRandomDistance: 30
+  isoid: {fileID: 100000, guid: 2b53e097d5657534fb23952fac3a4323, type: 2}

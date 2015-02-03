@@ -40,3 +40,6 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+## Blender backups
+*.blend1
