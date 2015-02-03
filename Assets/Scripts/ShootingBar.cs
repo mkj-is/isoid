@@ -12,16 +12,6 @@ public class ShootingBar : MonoBehaviour {
 	
 	public GUIStyle progress_empty;
 	public GUIStyle progress_full;
-
-	void Start()
-	{
-		Texture2D texture = new Texture2D(1, 1);
-		texture.SetPixel(0,0,Color.gray);
-		progress_empty.normal.background = texture;
-		Texture2D texture2 = new Texture2D(1, 1);
-		texture2.SetPixel(0,0,Color.green);
-		progress_full.normal.background = texture2;
-	}
 	
 	void OnGUI () {
 		// Create a group container to make positioning easier
