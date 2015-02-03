@@ -25,9 +25,9 @@ PlayerSettings:
   m_MobileMTRendering: 0
   m_UseDX11: 0
   m_Stereoscopic3D: 0
-  iosShowActivityIndicatorOnLoading: -1
+  iosShowActivityIndicatorOnLoading: 1
   androidShowActivityIndicatorOnLoading: -1
-  displayResolutionDialog: 1
+  displayResolutionDialog: 0
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
   allowedAutorotateToLandscapeRight: 1
@@ -54,7 +54,7 @@ PlayerSettings:
   xboxEnableKinectAutoTracking: 0
   xboxEnableFitness: 0
   visibleInBackground: 0
-  macFullscreenMode: 2
+  macFullscreenMode: 1
   d3d9FullscreenMode: 1
   d3d11ForceExclusiveMode: 0
   xboxSpeechDB: 0
@@ -86,7 +86,7 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   iPhoneSdkVersion: 988
   iPhoneTargetOSVersion: 16
-  uIPrerenderedIcon: 0
+  uIPrerenderedIcon: 1
   uIRequiresPersistentWiFi: 0
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
@@ -105,18 +105,57 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-  resolutionDialogBanner: {fileID: 0}
+  resolutionDialogBanner: {fileID: 2800000, guid: 3eae427ba9ff843edb7629344ce6f4bb,
+    type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
     - m_Icon: {fileID: 0}
       m_Size: 128
+  - m_BuildTarget: Standalone
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: 3eae427ba9ff843edb7629344ce6f4bb, type: 3}
+      m_Size: 1024
+    - m_Icon: {fileID: 2800000, guid: 861d80b4a696141d49f83fede40baeb4, type: 3}
+      m_Size: 512
+    - m_Icon: {fileID: 2800000, guid: 037f593412ff14bd4b3e37d9a3de109b, type: 3}
+      m_Size: 256
+    - m_Icon: {fileID: 2800000, guid: 75ab7f5eaeed94b1baf41ec77c302c72, type: 3}
+      m_Size: 128
+    - m_Icon: {fileID: 0}
+      m_Size: 48
+    - m_Icon: {fileID: 2800000, guid: 42372427dcd4c45c29b58180db1608dc, type: 3}
+      m_Size: 32
+    - m_Icon: {fileID: 2800000, guid: d707492bba4424ee88860ce658f3a09c, type: 3}
+      m_Size: 16
+  - m_BuildTarget: iPhone
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: 3eae427ba9ff843edb7629344ce6f4bb, type: 3}
+      m_Size: 180
+    - m_Icon: {fileID: 0}
+      m_Size: 152
+    - m_Icon: {fileID: 0}
+      m_Size: 144
+    - m_Icon: {fileID: 0}
+      m_Size: 120
+    - m_Icon: {fileID: 0}
+      m_Size: 114
+    - m_Icon: {fileID: 0}
+      m_Size: 76
+    - m_Icon: {fileID: 0}
+      m_Size: 72
+    - m_Icon: {fileID: 0}
+      m_Size: 57
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
     m_DynamicBatching: 1
+  - m_BuildTarget: iPhone
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Black Background
   m_TemplateCustomTags: {}
+  locationUsageDescription: 
   XboxTitleId: 
   XboxImageXexPath: 
   XboxSpaPath: 
@@ -262,6 +301,12 @@ PlayerSettings:
   tizenGPSPermissions: 0
   tizenMicrophonePermissions: 0
   stvDeviceAddress: 
+  wp8UnprocessedPlugins: []
+  intPropertyNames:
+  - iOS::Architecture
+  - iOS::ScriptingBackend
+  iOS::Architecture: 2
+  iOS::ScriptingBackend: 0
   firstStreamedLevelWithResources: 0
   unityRebuildLibraryVersion: 9
   unityForwardCompatibleVersion: 39

@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour {
 	{
 		if(Input.GetKey(KeyCode.Escape)){
 			ExitGame();
-		} else if(Input.anyKeyDown){
+		} else if(Input.GetAxis ("Fire1")==1){
 			StartGame();
 		}
 	}
