@@ -61,18 +61,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Move(float v)
     {
-        //playerRigidBody.MovePosition(position + movement);
         playerRigidBody.AddForce(transform.forward * v * Time.deltaTime * forwardSpeed);
     }
 
     void Turning(float h)
     {
         playerRigidBody.AddTorque(Vector3.up * rotationSpeed * Time.deltaTime * h);
-        //playerRigidBody.WakeUp ();
-        //transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime * h);
     }
-
-    //Provizorní --> musí se změnit
+	
     void OnTriggerEnter(Collider other)
     {
 		if (other.gameObject.name == "Isoid(Clone)")
