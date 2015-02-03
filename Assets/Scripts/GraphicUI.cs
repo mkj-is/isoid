@@ -10,6 +10,7 @@ public class GraphicUI : MonoBehaviour {
     private float finalScore;
 
 	void Start(){
+		Screen.showCursor = false;
 		gameOver = false;
 	}
 
@@ -28,6 +29,7 @@ public class GraphicUI : MonoBehaviour {
 	}
 	void Update(){
 		if(Input.GetKey(KeyCode.Escape) || (gameOver && Input.anyKeyDown && Input.GetAxis ("Fire1") != 1)){
+			Screen.showCursor = true;
 			Application.LoadLevel("Menu");
 		}
 	}
