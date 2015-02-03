@@ -17,7 +17,7 @@ GameObject:
   - 82: {fileID: 8276062}
   m_Layer: 9
   m_Name: PowerupSplit
-  m_TagString: PowerupSplit
+  m_TagString: Isoid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

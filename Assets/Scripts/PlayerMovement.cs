@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
     //Provizorní --> musí se změnit
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Isoid")
+		if (other.gameObject.name == "Isoid(Clone)")
         {
 			pickupSound.Play();
             float energyLeft = other.GetComponent<Energy>().CurrentEnergy;
@@ -84,19 +84,19 @@ public class PlayerMovement : MonoBehaviour
 			this.GetComponent<Shooting>().currentEnergy = this.GetComponent<Shooting>().startingEnergy;
             Destroy(other.gameObject);
         }
-        else if (other.tag == "PowerupNocost")
+		else if (other.gameObject.name == "PowerupNocost(Clone)")
         {
             this.GetComponent<Shooting>().nocostPickup();
 
             Destroy(other.gameObject);
         }
-        else if (other.tag == "PowerupFirerate")
+		else if (other.gameObject.name == "PowerupFirerate(Clone)")
         {
             this.GetComponent<Shooting>().fireratePickup();
 
             Destroy(other.gameObject);
         }
-        else if (other.tag == "PowerupSplit")
+		else if (other.gameObject.name == "PowerupSplit(Clone)")
         {
             this.GetComponent<Shooting>().splitPickup();
 
