@@ -49,12 +49,12 @@ public class UfoAi : MonoBehaviour {
 
         transform.Rotate(Vector3.back * rotationSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(this.transform.position, player.transform.position) > 1000)
+        if (player && Vector3.Distance(this.transform.position, player.transform.position) > 1000)
         {
             Destroy(this.gameObject);
         }
 
-        if (Vector3.Distance(this.transform.position, player.transform.position) < shootingDistance && Time.time > nextFire)
+        if (player && Vector3.Distance(this.transform.position, player.transform.position) < shootingDistance && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Vector3 rotationVector = player.transform.position - this.transform.position;
@@ -84,7 +84,7 @@ public class UfoAi : MonoBehaviour {
 
     private void UpdateMoveState()
     {
-        if (Vector3.Distance(this.transform.position, player.transform.position) <= Random.Range(movingDistance - 5, movingDistance + 5))
+        if (player && Vector3.Distance(this.transform.position, player.transform.position) <= Random.Range(movingDistance - 5, movingDistance + 5))
         {
             state = UFOState.CircleAndShoot;
 
@@ -102,7 +102,9 @@ public class UfoAi : MonoBehaviour {
 
     private void MoveToPlayer()
     {
-        rigidbody.AddForce((player.transform.position - this.transform.position) * Time.deltaTime * speed);
+		if (player) {
+			rigidbody.AddForce((player.transform.position - this.transform.position) * Time.deltaTime * speed);
+		}
 
         //maxSpeed
         if (rigidbody.velocity.magnitude > maxSpeed)
