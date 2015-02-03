@@ -36,10 +36,9 @@ public class GraphicUI : MonoBehaviour {
 
 	public void EndGame(){
 		gameOver = true;
-		endTime = Time.realtimeSinceStartup;
+		endTime = Time.timeSinceLevelLoad;
         finalScore = ScoreManager.score;
         StoreHighScore(finalScore);
-        //Time.timeScale = 0;
 	}
 
     void StoreHighScore(float newScore)
