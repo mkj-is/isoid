@@ -16,14 +16,14 @@ public class GraphicUI : MonoBehaviour {
 	void OnGUI()
 	{
 		if (!gameOver) {
-			GUI.Label (new Rect (Screen.width - 200 - 50, 40, 200, 50), "Score: " + ScoreManager.score.ToString ("00000"), guiLay);
+			GUI.Label (new Rect (Screen.width - 200 - 50, 40, 200, 50), "SCORE: " + ScoreManager.score.ToString ("00000"), guiLay);
 		} else {
 			guiLay.fontSize=35;
 			GUI.Label (new Rect ((Screen.width/2) - 100,(Screen.height/2)-100,200,80),"GAME OVER", guiLay);
 			guiLay.fontSize=25;
-			GUI.Label (new Rect ((Screen.width/2) - 100,(Screen.height/2),200,80),"Time: "+endTime.ToString("F1"),guiLay);
+			GUI.Label (new Rect ((Screen.width/2) - 100,(Screen.height/2),200,80),"TIME: "+endTime.ToString("F1") + " S",guiLay);
             guiLay.fontSize = 25;
-			GUI.Label(new Rect((Screen.width / 2) - 100, (Screen.height / 2) + 100, 200, 80), "Score: " + finalScore.ToString ("00000"), guiLay);
+			GUI.Label(new Rect((Screen.width / 2) - 100, (Screen.height / 2) + 100, 200, 80), "SCORE: " + finalScore.ToString ("00000"), guiLay);
 		}
 	}
 	void Update(){

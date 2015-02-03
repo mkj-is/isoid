@@ -107,8 +107,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: .377220005, y: -60}
-  m_SizeDelta: {x: 200, y: 40}
+  m_AnchoredPosition: {x: -1.5, y: -27.4500084}
+  m_SizeDelta: {x: 257.5, y: 54.9000015}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &243560199
 MonoBehaviour:
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 970b917543a4e4be6b9f26ed57823493, type: 3}
     m_FontSize: 18
@@ -392,7 +392,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLAY!
+  m_Text: PLAY GAME!
 --- !u!222 &626185956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 970b917543a4e4be6b9f26ed57823493, type: 3}
     m_FontSize: 18
@@ -458,7 +458,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EXIT
+  m_Text: EXIT GAME
 --- !u!222 &675486073
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -494,9 +494,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1765596321}
   m_RootOrder: 4
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: .400000006, y: 60.7999992}
+  m_AnchorMin: {x: .5, y: 0}
+  m_AnchorMax: {x: .5, y: 0}
+  m_AnchoredPosition: {x: -5.19999981, y: 84.3000031}
   m_SizeDelta: {x: 300, y: 35}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &845876782
@@ -524,7 +524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Highscore: xxxxx'
+  m_Text: 'HIGHSCORE: xxxxx'
 --- !u!222 &845876783
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -741,9 +741,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1765596321}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: .400000006, y: 119.300003}
+  m_AnchorMin: {x: .5, y: 1}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: 6.19888306e-06, y: -65}
   m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1409044236
@@ -1126,11 +1126,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1765596321}
   m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 10.9130001, y: -215.520004}
-  m_SizeDelta: {x: 500, y: 100}
-  m_Pivot: {x: .5, y: .5}
+  m_AnchorMin: {x: .5, y: 0}
+  m_AnchorMax: {x: .5, y: 0}
+  m_AnchoredPosition: {x: 10, y: 30.4799957}
+  m_SizeDelta: {x: 498, y: 30.4799995}
+  m_Pivot: {x: .5, y: 1}
 --- !u!114 &1775463751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,8 +1156,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "(c) 2014 RADOM\xCDR VINKLER, KAREL LOCKENBAUER, MAT\u011AJ KA\u0160PAR
-    JIR\xC1SEK"
+  m_Text: "(c) 2014-2015 RADOM\xCDR VINKLER, MAT\u011AJ KA\u0160PAR JIR\xC1SEK, KAREL
+    LOCKENBAUER"
 --- !u!222 &1775463752
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1277,6 +1277,6 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 9}
-  m_SizeDelta: {x: 200, y: 40}
+  m_AnchoredPosition: {x: -1.5, y: 41.4000015}
+  m_SizeDelta: {x: 257.5, y: 52.9000015}
   m_Pivot: {x: .5, y: .5}
