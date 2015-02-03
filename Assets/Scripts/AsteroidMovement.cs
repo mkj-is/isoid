@@ -15,6 +15,7 @@ public class AsteroidMovement : MonoBehaviour {
 		direction = new Vector3 (Random.Range(-speed, speed), 0.0f, Random.Range(-speed, speed));
 		rigidbody.AddForce(direction * Time.deltaTime * speed);
 		float scale = Random.Range (1f - randomScale, 1f + randomScale);
+		transform.localScale = new Vector3(scale, scale, scale);
 	}
 	
 	// Update is called once per frame
