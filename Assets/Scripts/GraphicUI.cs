@@ -27,10 +27,8 @@ public class GraphicUI : MonoBehaviour {
 		}
 	}
 	void Update(){
-		if (gameOver) {
-			if(Input.anyKeyDown && Input.GetAxis ("Fire1") != 1){
-				Application.LoadLevel("Menu");
-			}
+		if(Input.GetKey(KeyCode.Escape) || (gameOver && Input.anyKeyDown && Input.GetAxis ("Fire1") != 1)){
+			Application.LoadLevel("Menu");
 		}
 	}
 
