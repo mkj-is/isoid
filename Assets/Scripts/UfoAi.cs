@@ -137,6 +137,12 @@ public class UfoAi : MonoBehaviour {
 	void OnDestroy()
 	{
 		GameObject audioPlayer = GameObject.FindGameObjectWithTag("Sound");
-		audioPlayer.GetComponents<AudioSource> () [0].Play ();
+		if (!audioPlayer) {
+			return;
+		}
+		AudioSource[] sources = audioPlayer.GetComponents<AudioSource> ();
+		if (sources[0]) {
+			sources[0].Play ();
+		}
 	}
 }
