@@ -9,6 +9,15 @@ public class Menu : MonoBehaviour {
         GameObject.Find("Highscore").GetComponent<Text>().text = "Highscore: " + PlayerPrefs.GetFloat("highscore", 0).ToString("00000");
     }
 
+	void Update()
+	{
+		if(Input.GetKey(KeyCode.Escape)){
+			ExitGame();
+		} else if(Input.anyKeyDown){
+			StartGame();
+		}
+	}
+
 	public void StartGame() {
 		Application.LoadLevel("Prototype");
 	}
