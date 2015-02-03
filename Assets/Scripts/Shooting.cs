@@ -19,9 +19,9 @@ public class Shooting : MonoBehaviour {
     private float firerate;
     private bool split = false;
 
-    private float nocostRemaining = 0f;
-    private float firerateRemaining = 0f;
-    private float splitRemaining = 0f;
+    public float nocostRemaining = 0f;
+    public float firerateRemaining = 0f;
+    public float splitRemaining = 0f;
 
 	void OnStart() {
 		currentEnergy = startingEnergy;

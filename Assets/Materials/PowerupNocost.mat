@@ -33,7 +33,7 @@ Material:
       data:
         first:
           name: _LineColor
-        second: {r: 1, g: 1, b: 0, a: 1}
+        second: {r: .423529416, g: .87843138, b: .0156862754, a: 1}
       data:
         first:
           name: _GridColor
