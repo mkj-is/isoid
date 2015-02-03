@@ -46,14 +46,14 @@ public class Energy : MonoBehaviour {
 		if (this.gameObject.tag == "Player") {
 			gameObject.SetActive(false);
 
-            Object.Destroy(Instantiate(explosion, this.transform.position, this.transform.rotation), 1);
+            Object.Destroy(Instantiate(explosion, this.transform.position, this.transform.rotation), 10);
 
             GameObject.Find("GUI").GetComponent<GraphicUI>().EndGame();
         }
         else if (this.gameObject.tag == "Enemy")
         {
             //Instantiate and destroy explosion
-            Object.Destroy(Instantiate(explosion, this.transform.position, this.transform.rotation), 1);
+            Object.Destroy(Instantiate(explosion, this.transform.position, this.transform.rotation), 10);
 
             ScoreManager.score += score;
             Destroy(gameObject);

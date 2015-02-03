@@ -56,15 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = new Vector3(transform.position.x, height, transform.position.z);
 
-        exhaustParticles.emissionRate = 2 + v * v * forwardSpeed / 2;
-        /*if (v > 0)
-        {
-            exhaustParticles.enableEmission = true;
-        }
-        else
-        {
-            exhaustParticles.enableEmission = false;
-        }*/
+        exhaustParticles.emissionRate = 2 + v * forwardSpeed / 30;
     }
 
     void Move(float v)

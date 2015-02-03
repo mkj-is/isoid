@@ -340,7 +340,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 1
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -373,7 +373,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 3
+      scalar: 1.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -490,7 +490,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .100000001
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -612,7 +612,7 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 0
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
@@ -620,25 +620,20 @@ ParticleSystem:
         m_Curve:
         - time: 0
           value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
         - time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
+          value: 0
+          inSlope: -1
+          outSlope: -1
+          tangentMode: 10
         m_PreInfinity: 2
         m_PostInfinity: 2
       minCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-        - time: 1
           value: 0
           inSlope: 0
           outSlope: 0
@@ -1436,7 +1431,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &792719959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,23 +1811,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: .270598024
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -.270598173
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -.707106829
+      value: .653281331
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: .707106829
+      value: -.653281689
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2035,14 +2030,14 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 144af8585e6ae464390fd622d885bf9b, type: 3}
   m_PrefabInternal: {fileID: 1001237637}
   m_GameObject: {fileID: 1771387742}
-  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
+  m_LocalRotation: {x: .270598024, y: -.270598173, z: .653281331, w: -.653281689}
   m_LocalPosition: {x: 1.75316703, y: 1.98049116, z: .157255888}
   m_LocalScale: {x: .659999967, y: 1, z: 1}
   m_Children:
   - {fileID: 904307221}
   - {fileID: 541351911}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!64 &1771387748
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2084,7 +2079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile: {fileID: 100000, guid: c64d9dbe1391fb047b6b970f64564a26, type: 2}
-  defaultEnergyCosts: 5
+  defaultEnergyCosts: 10
   defaultFirerate: .100000001
   startingEnergy: 100
   currentEnergy: 100
