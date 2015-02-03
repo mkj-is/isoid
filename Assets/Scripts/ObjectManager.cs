@@ -14,7 +14,7 @@ public class ObjectManager : MonoBehaviour {
 	void Start()
 	{
 		player = GameObject.FindGameObjectWithTag("Player");
-		InvokeRepeating("Spawn", spawnTime, spawnTime);
+        InvokeRepeating("Spawn", Random.Range(spawnTime - (spawnTime / 2), spawnTime + (spawnTime / 2)), spawnTime);
 	}
 	
 	void Spawn()
