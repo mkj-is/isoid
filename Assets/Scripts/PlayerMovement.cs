@@ -26,22 +26,22 @@ public class PlayerMovement : MonoBehaviour
         float h = 0;
         float v = 0;
 
-        if (Application.platform == RuntimePlatform.MetroPlayerARM)
+        if (Application.isMobilePlatform)
         {
-            if (Input.touchCount == 1)
-            {
-                if (Input.GetTouch(0).position.x < Screen.width / 2)
+			if (Input.touchCount == 1 && Input.GetTouch(0).position.y < Screen.height / 2)
+			{
+				if (Input.GetTouch(0).position.x < Screen.width / 3)
                 {
                     h = -1;
                 }
-                else
+				else if(Input.GetTouch(0).position.x < Screen.width / 3 * 2)
                 {
-                    h = 1;
+                    v = 1;
                 }
-            }
-            else if (Input.touchCount >= 2)
-            {
-                v = 1;
+				else
+				{
+					h = 1;
+				}
             }
         }
         else

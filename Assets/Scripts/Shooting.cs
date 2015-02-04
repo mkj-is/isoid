@@ -32,13 +32,13 @@ public class Shooting : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if ((Input.GetAxis ("Fire1")==1 ) && Time.time > nextFire && currentEnergy - energyCosts > 0f) {
+		if ((Input.GetAxis ("Fire1")==1 || (Application.isMobilePlatform && Input.touchCount == 1 && Input.GetTouch(0).position.y > Screen.height / 2)) && Time.time > nextFire && currentEnergy - energyCosts > 0f) {
             nextFire = Time.time + firerate;
 			Fire ();
 			currentEnergy -=energyCosts;
 		}
 	}
-
+	
 	void FixedUpdate() {
 		currentEnergy += refillRate;
 		if (currentEnergy > startingEnergy) {
