@@ -12,9 +12,15 @@ public class Energy : MonoBehaviour {
 
     public GameObject explosion;
 
+    private float DefaultEnergy;
+    private float DefaultEnergyDecreaseRate;
+    private bool cheat = false;
+
 	// Use this for initialization
 	void Start () {
 		CurrentEnergy = StartingEnergy;
+        DefaultEnergy = StartingEnergy;
+        DefaultEnergyDecreaseRate = energyDecreaseRate;
 	}
 	
 	// Update is called once per frame
@@ -62,4 +68,25 @@ public class Energy : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
+
+
+    void OnIddqdCode()
+    {
+        if (!cheat)
+        {
+            Debug.Log("iddqd activated!");
+            cheat = true;
+            StartingEnergy = float.MaxValue;
+            CurrentEnergy = StartingEnergy;
+            energyDecreaseRate = 0f;
+        }
+        else
+        {
+            Debug.Log("iddqd deactivated!");
+            cheat = false;
+            StartingEnergy = DefaultEnergy;
+            CurrentEnergy = StartingEnergy;
+            energyDecreaseRate = DefaultEnergyDecreaseRate;
+        }
+    }
 }

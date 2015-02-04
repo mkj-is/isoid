@@ -18,6 +18,7 @@ public class Shooting : MonoBehaviour {
     private float energyCosts;
     private float firerate;
     private bool split = false;
+    private bool cheat = false;
 
     public float nocostRemaining = 0f;
     public float firerateRemaining = 0f;
@@ -48,20 +49,25 @@ public class Shooting : MonoBehaviour {
         {
             energyCosts = 0;
             firerate = defaultFirerate / 2;
-            nocostRemaining -= Time.deltaTime;
-            firerateRemaining -= Time.deltaTime;
+            if (!cheat)
+            {
+                nocostRemaining -= Time.deltaTime;
+                firerateRemaining -= Time.deltaTime;
+            }
         }
         else if (nocostRemaining > 0)
         {
             energyCosts = 0;
             firerate = defaultFirerate;
-            nocostRemaining -= Time.deltaTime;
+            if (!cheat)
+                nocostRemaining -= Time.deltaTime;
         }
         else if (firerateRemaining > 0)
         {
             firerate = defaultFirerate / 2;
             energyCosts = defaultEnergyCosts / 2;
-            firerateRemaining -= Time.deltaTime;
+            if (!cheat)
+                firerateRemaining -= Time.deltaTime;
         }
         else
         {
@@ -72,7 +78,8 @@ public class Shooting : MonoBehaviour {
         if (splitRemaining > 0)
         {
             split = true;
-            splitRemaining -= Time.deltaTime;
+            if (!cheat)
+                splitRemaining -= Time.deltaTime;
         }
         else
         {
@@ -119,5 +126,26 @@ public class Shooting : MonoBehaviour {
     public void splitPickup()
     {
         splitRemaining = splitDuration;
+    }
+
+
+    void OnIdkfaCode()
+    {
+        if (!cheat)
+        {
+            cheat = true;
+            Debug.Log("idkfa activated!");
+            nocostRemaining = nocostDuration;
+            firerateRemaining = firerateDuration;
+            splitRemaining = splitDuration;
+        }
+        else
+        {
+            cheat = false;
+            Debug.Log("idkfa deactivated!");
+            nocostRemaining = 1;
+            firerateRemaining = 1;
+            splitRemaining = 1;
+        }
     }
 }
