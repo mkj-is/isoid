@@ -1202,8 +1202,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 10, y: 30.4799957}
-  m_SizeDelta: {x: 498, y: 30.4799995}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 699, y: 50}
   m_Pivot: {x: .5, y: 1}
 --- !u!114 &1775463751
 MonoBehaviour:
@@ -1230,8 +1230,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "(c) 2014-2015 RADOM\xCDR VINKLER, MAT\u011AJ KA\u0160PAR JIR\xC1SEK, KAREL
-    LOCKENBAUER"
+  m_Text: "MUSIC BY BASS ASSASSIN AND TWIGHLIGHT TIPI\n(c) 2014-2015 RADOM\xCDR VINKLER,
+    MAT\u011AJ KA\u0160PAR JIR\xC1SEK, KAREL LOCKENBAUER"
 --- !u!222 &1775463752
 CanvasRenderer:
   m_ObjectHideFlags: 0
