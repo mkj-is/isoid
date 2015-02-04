@@ -27,7 +27,7 @@ PlayerSettings:
   m_Stereoscopic3D: 0
   iosShowActivityIndicatorOnLoading: 1
   androidShowActivityIndicatorOnLoading: -1
-  displayResolutionDialog: 0
+  displayResolutionDialog: 2
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
   allowedAutorotateToLandscapeRight: 1
@@ -105,7 +105,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-  resolutionDialogBanner: {fileID: 2800000, guid: 3eae427ba9ff843edb7629344ce6f4bb,
+  resolutionDialogBanner: {fileID: 2800000, guid: 3cd5b5a08c2b1441598c2f6b4b811237,
     type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
