@@ -2,6 +2,8 @@
 
 Low-poly, wired, pseudo-3D space shooter made in Unity engine in [Digital games](https://is.muni.cz/predmet/fi/podzim2014/PV255) course at Faculty of Informatics at Masaryk University.
 
+Web version is available at <http://mkj-is.github.io/isoid/>
+
 Made in Unity 4.6.2.
 
 ## Credits
