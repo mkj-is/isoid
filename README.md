@@ -4,6 +4,8 @@ Low-poly, wired, pseudo-3D space shooter made in Unity engine in [Digital games]
 
 Web version is available at <http://mkj-is.github.io/isoid/>
 
+If you have any questions or suggestions, add an issue or visit our [public board on Trello](http://j.mp/isoid-trello).
+
 Made in Unity 4.6.2.
 
 ## Credits
