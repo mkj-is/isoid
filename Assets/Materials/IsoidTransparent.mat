@@ -51,13 +51,13 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
-      data:
-        first:
           name: _LineColor
-        second: {r: .0431372561, g: .639215708, b: .196078435, a: 1}
+        second: {r: .0823529437, g: .639215708, b: .196078435, a: 1}
       data:
         first:
           name: _GridColor
         second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
