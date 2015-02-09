@@ -28,21 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Application.isMobilePlatform)
         {
-			if (Input.touchCount == 1 && Input.GetTouch(0).position.y < Screen.height / 2)
-			{
-				if (Input.GetTouch(0).position.x < Screen.width / 3)
-                {
-                    h = -1;
-                }
-				else if(Input.GetTouch(0).position.x < Screen.width / 3 * 2)
-                {
-                    v = 1;
-                }
-				else
-				{
-					h = 1;
+			foreach (Touch touch in Input.touches) {
+				if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled && touch.position.x < Screen.width / 2) {
+					v = 1;
 				}
-            }
+			}
+			h = Input.acceleration.x / 3;
         }
         else
         {
