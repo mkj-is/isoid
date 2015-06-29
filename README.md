@@ -8,8 +8,6 @@ The game is currently available for Windows, Mac and Linux. Mobile version is on
 
 [**Download the game here.**](http://github.com/mkj-is/isoid/releases/tag/v1.0)
 
-Download the latest version for Windows, Mac and Linus in releases.
-
 Web version is available at <http://isoid.mkj.is/>
 
 ## Contribution
