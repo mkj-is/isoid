@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ShootingBar : MonoBehaviour {
-	Vector2 pos = new Vector2(60, 60);
+	Vector2 pos = new Vector2(60, 40);
 	Vector2 size = new Vector2(200, 30);
 	
 	float barFill = 0.8f;

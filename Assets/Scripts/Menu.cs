@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
@@ -19,7 +20,8 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void StartGame() {
-		Application.LoadLevel("Prototype");
+        SceneManager.LoadScene("Prototype");
+		//Application.LoadLevel("Prototype");
 	}
 
 	public void ExitGame() {

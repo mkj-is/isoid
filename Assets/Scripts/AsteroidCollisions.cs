@@ -9,7 +9,7 @@ public class AsteroidCollisions : MonoBehaviour {
 	{
 		if (other.tag == "Asteroid")
 		{
-			this.rigidbody.velocity = -this.rigidbody.velocity;
+			this.GetComponent<Rigidbody>().velocity = -this.GetComponent<Rigidbody>().velocity;
 		}
 		if (other.tag == "Missile")
 		{

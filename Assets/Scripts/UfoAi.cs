@@ -59,7 +59,7 @@ public class UfoAi : MonoBehaviour {
             nextFire = Time.time + fireRate;
             Vector3 rotationVector = player.transform.position - this.transform.position;
             GameObject shot = Instantiate(missile, this.transform.position, Quaternion.LookRotation(rotationVector)) as GameObject;
-            Physics.IgnoreCollision(shot.collider, this.collider, true);
+            Physics.IgnoreCollision(shot.GetComponent<Collider>(), this.GetComponent<Collider>(), true);
         }
     }
 
@@ -93,7 +93,7 @@ public class UfoAi : MonoBehaviour {
                 rotationDirection *= -1;
 
             //stop approach
-            rigidbody.drag = 1000;
+            GetComponent<Rigidbody>().drag = 1000;
             //rotationSpeed *= 2;
         }
 
@@ -103,33 +103,33 @@ public class UfoAi : MonoBehaviour {
     private void MoveToPlayer()
     {
 		if (player) {
-			rigidbody.AddForce((player.transform.position - this.transform.position) * Time.deltaTime * speed);
+			GetComponent<Rigidbody>().AddForce((player.transform.position - this.transform.position) * Time.deltaTime * speed);
 		}
 
         //maxSpeed
-        if (rigidbody.velocity.magnitude > maxSpeed)
-            rigidbody.velocity *= 0.8f;
+        if (GetComponent<Rigidbody>().velocity.magnitude > maxSpeed)
+            GetComponent<Rigidbody>().velocity *= 0.8f;
     }
 
     private void CircleAroundPlayer()
     {
         //this.transform.RotateAround(player.transform.position, Vector3.up, circleSpeed * Time.deltaTime);
-        rigidbody.drag = 0.5f;
+        GetComponent<Rigidbody>().drag = 0.5f;
         Vector3 perpandicular = Vector3.Cross(player.transform.position - this.transform.position, Vector3.up);
-        rigidbody.AddForce(perpandicular * Time.deltaTime * circleSpeed * rotationDirection);
+        GetComponent<Rigidbody>().AddForce(perpandicular * Time.deltaTime * circleSpeed * rotationDirection);
 
         //maxSpeed
-        if (rigidbody.velocity.magnitude > maxCircleSpeed)
-            rigidbody.velocity *= 0.8f;
+        if (GetComponent<Rigidbody>().velocity.magnitude > maxCircleSpeed)
+            GetComponent<Rigidbody>().velocity *= 0.8f;
 
         if (Vector3.Distance(this.transform.position, player.transform.position) <= movingDistance - 2)
         {
             //this.transform.position = Vector3.MoveTowards(transform.position, player.transform.position, -speed * Time.deltaTime);
-            rigidbody.AddForce((this.transform.position - player.transform.position) * Time.deltaTime * speed * 2);
+            GetComponent<Rigidbody>().AddForce((this.transform.position - player.transform.position) * Time.deltaTime * speed * 2);
         }
         else if (Vector3.Distance(this.transform.position, player.transform.position) >= movingDistance + 2)
         {
-            rigidbody.AddForce((player.transform.position - this.transform.position) * Time.deltaTime * speed * 2);
+            GetComponent<Rigidbody>().AddForce((player.transform.position - this.transform.position) * Time.deltaTime * speed * 2);
         }
 
     }

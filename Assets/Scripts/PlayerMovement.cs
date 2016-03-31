@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,8 +11,12 @@ public class PlayerMovement : MonoBehaviour
 
 	public AudioSource pickupSound;
 
+    public GameObject Joystick;
+
     Rigidbody playerRigidBody;
     ParticleSystem exhaustParticles;
+
+
 
     void Awake()
     {
@@ -26,19 +31,26 @@ public class PlayerMovement : MonoBehaviour
         float h = 0;
         float v = 0;
 
-        if (Application.isMobilePlatform)
-        {
-			foreach (Touch touch in Input.touches) {
-				if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled && touch.position.x < Screen.width / 2) {
-					v = 1;
-				}
-			}
-			h = Input.acceleration.x / 3;
-        }
-        else
+        if (!Joystick.activeInHierarchy)
         {
             h = Input.GetAxisRaw("Horizontal");
             v = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            v = Vector2.SqrMagnitude(new Vector2(CrossPlatformInputManager.GetAxisRaw("Horizontal"), CrossPlatformInputManager.GetAxisRaw("Vertical")));
+
+            float InputRotation = Mathf.Atan2(-CrossPlatformInputManager.GetAxisRaw("Horizontal"), -CrossPlatformInputManager.GetAxisRaw("Vertical")) * Mathf.Rad2Deg + 180;
+            float HoverRotation = transform.rotation.eulerAngles.y;
+            float RotationalDifference = Mathf.Abs(InputRotation - HoverRotation) > 180 ? HoverRotation - InputRotation : InputRotation - HoverRotation;
+
+            if (v > 0.1 && Mathf.Abs(RotationalDifference) > 5)
+            {
+                if (RotationalDifference > 0)
+                    h = 1;
+                else
+                    h = -1;
+            }
         }
 
         Move(v);
@@ -47,7 +59,9 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position = new Vector3(transform.position.x, height, transform.position.z);
 
-        exhaustParticles.emissionRate = 2 + v * forwardSpeed / 30;
+        ParticleSystem.EmissionModule em = exhaustParticles.emission;
+        em.rate = new ParticleSystem.MinMaxCurve(2 + v * forwardSpeed / 30);
+        //exhaustParticles.emissionRate = 2 + v * forwardSpeed / 30;
     }
 
     void Move(float v)

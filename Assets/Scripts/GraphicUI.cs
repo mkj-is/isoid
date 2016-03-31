@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GraphicUI : MonoBehaviour {
 
@@ -9,8 +10,10 @@ public class GraphicUI : MonoBehaviour {
 	public GUIStyle guiLay;
     private float finalScore;
 
+    private float inputTimer;
+
 	void Start(){
-		Screen.showCursor = false;
+		Cursor.visible = true;
 		gameOver = false;
 	}
 
@@ -28,9 +31,10 @@ public class GraphicUI : MonoBehaviour {
 		}
 	}
 	void Update(){
-		if(Input.GetKey(KeyCode.Escape) || (gameOver && Input.anyKeyDown && Input.GetAxis ("Fire1") != 1)){
-			Screen.showCursor = true;
-			Application.LoadLevel("Menu");
+		if(Input.GetKey(KeyCode.Escape) || (gameOver && Input.anyKeyDown && Input.GetAxis ("Fire1") != 1 && (Time.time-inputTimer > 2))){
+			Cursor.visible = true;
+            SceneManager.LoadScene("Menu");
+			//Application.LoadLevel("Menu");
 		}
 	}
 
@@ -39,6 +43,7 @@ public class GraphicUI : MonoBehaviour {
 		endTime = Time.timeSinceLevelLoad;
         finalScore = ScoreManager.score;
         StoreHighScore(finalScore);
+        inputTimer = Time.time;
 	}
 
     void StoreHighScore(float newScore)

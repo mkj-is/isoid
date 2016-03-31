@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PowerupBar : MonoBehaviour {
-    Vector2 pos = new Vector2(60, 60);
+    Vector2 pos = new Vector2(60, 40);
     Vector2 size = new Vector2(60, 30);
 
     private float nocostBarFill = 1f;
@@ -11,6 +11,7 @@ public class PowerupBar : MonoBehaviour {
     string barText = "";
 
     public GameObject Player;
+    public GameObject Joystick;
 
     public GUIStyle nocost_full;
     public GUIStyle firerate_full;
@@ -19,7 +20,14 @@ public class PowerupBar : MonoBehaviour {
     void OnGUI()
     {
         // Create a group container to make positioning easier
-        GUI.BeginGroup(new Rect(Screen.width / 2 - size.x / 2, Screen.height - size.y - pos.y, size.x, size.y));
+        if (Joystick.activeInHierarchy)
+        {
+            GUI.BeginGroup(new Rect(Screen.width / 2 - size.x / 2 + 70, Screen.height - size.y - pos.y, size.x, size.y));
+        }
+        else
+        {
+            GUI.BeginGroup(new Rect(Screen.width / 2 - size.x / 2, Screen.height - size.y - pos.y, size.x, size.y));
+        }
 
         // Nocost
         GUI.Box(new Rect(0, size.y - size.y * nocostBarFill, 15, size.y * nocostBarFill), barText, nocost_full);

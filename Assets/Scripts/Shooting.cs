@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Shooting : MonoBehaviour {
 
@@ -32,15 +33,8 @@ public class Shooting : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		bool mobileFire = false;
-		if (Application.isMobilePlatform) {
-			foreach (Touch touch in Input.touches) {
-				if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled && touch.position.x > Screen.width / 2) {
-					mobileFire = true;
-				}
-			}
-		}
-		if ((Input.GetAxis ("Fire1")==1 || mobileFire) && Time.time > nextFire && currentEnergy - energyCosts > 0f) {
+        if ((Input.GetAxis("Fire1") == 1 || CrossPlatformInputManager.GetButton("Fire1")) && Time.time > nextFire && currentEnergy - energyCosts > 0f)
+        {
             nextFire = Time.time + firerate;
 			Fire ();
 			currentEnergy -=energyCosts;
