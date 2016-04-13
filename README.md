@@ -16,7 +16,7 @@ If you have any questions or suggestions, add an issue or visit our [public boar
 
 Don't be shy and submit any pull requests or if you wish to contribute more tweet [@mkj_is](http://twitter.com/mkj_is).
 
-Game is made in Unity, the latest version where the source code was tested and updated is Unity 4.6.6.
+Game is made in Unity, the latest version where the source code was tested and updated is Unity 5.3.
 
 ## Credits
 
