@@ -31,7 +31,7 @@ public class GraphicUI : MonoBehaviour {
 		}
 	}
 	void Update(){
-		if(Input.GetKey(KeyCode.Escape) || (gameOver && Input.anyKeyDown && Input.GetAxis ("Fire1") != 1 && (Time.time-inputTimer > 2))){
+		if(Input.GetKey(KeyCode.Escape) || (gameOver && Input.anyKeyDown && Input.GetAxis ("Fire1") != 1 && (Time.time-inputTimer > 1))){
 			Cursor.visible = true;
             SceneManager.LoadScene("Menu");
 			//Application.LoadLevel("Menu");
